@@ -26,7 +26,7 @@ const RestaurantCard = (props) => {
                 <div>~{deliveryTime} mins</div>
             </div>
             <div className='text-md text-center font-thin truncate w-full'>{cuisines.join(", ")}</div>
-            <div className="text-md text-center text-[#F05455] font-semibold">{costForTwo}</div>
+            <div className="text-md text-center text-[#F05455] font-semibold">{costForTwo.toUpperCase()}</div>
 
 
         </div>
