@@ -641,5 +641,537 @@ export const restaurants = [
             "type": "WEBLINK"
         },
         "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+    },
+    {
+        "info": {
+            "id": "92242",
+            "name": "Pizza Hut",
+            "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
+            "locality": "Kalyan East",
+            "areaName": "Kalyan East",
+            "costForTwo": "₹350 for two",
+            "cuisines": [
+            "Pizzas"
+            ],
+            "avgRating": 3.9,
+            "parentId": "721",
+            "avgRatingString": "3.9",
+            "totalRatingsString": "1K+",
+            "sla": {
+            "deliveryTime": 20,
+            "lastMileTravel": 0.5,
+            "serviceability": "SERVICEABLE",
+            "slaString": "20 mins",
+            "lastMileTravelString": "0.5 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-27 23:00:00",
+            "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {}
+            }
+            },
+            "aggregatedDiscountInfoV3": {
+            "header": "60% OFF",
+            "subHeader": "UPTO ₹120"
+            },
+            "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+            },
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+            "context": "seo-data-688e0256-d7a7-4532-a40d-6d63cab9e1a5"
+            },
+            "cta": {
+            "link": "https://www.swiggy.com/restaurants/pizza-hut-kalyan-east-mumbai-92242",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+            },
+            {
+            "info": {
+            "id": "692875",
+            "name": "Starboy Pizza & Shakes",
+            "cloudinaryImageId": "f7728e17d2a40a6fd0e811bde4019a11",
+            "locality": "Aadharwadi Road",
+            "areaName": "Kalyan",
+            "costForTwo": "₹250 for two",
+            "cuisines": [
+            "Pizzas",
+            "Desserts",
+            "Beverages"
+            ],
+            "avgRating": 3.7,
+            "parentId": "195514",
+            "avgRatingString": "3.7",
+            "totalRatingsString": "50+",
+            "sla": {
+            "deliveryTime": 36,
+            "lastMileTravel": 2.2,
+            "serviceability": "SERVICEABLE",
+            "slaString": "36 mins",
+            "lastMileTravelString": "2.2 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-28 00:00:00",
+            "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {}
+            }
+            },
+            "aggregatedDiscountInfoV3": {
+            "header": "₹125 OFF",
+            "subHeader": "ABOVE ₹249",
+            "discountTag": "FLAT DEAL"
+            },
+            "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+            },
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+            "context": "seo-data-688e0256-d7a7-4532-a40d-6d63cab9e1a5"
+            },
+            "cta": {
+            "link": "https://www.swiggy.com/restaurants/starboy-pizza-and-shakes-aadharwadi-road-kalyan-mumbai-692875",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+            },
+            {
+            "info": {
+            "id": "203926",
+            "name": "Burger King",
+            "cloudinaryImageId": "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+            "locality": "Barave Road",
+            "areaName": "Kalyan",
+            "costForTwo": "₹350 for two",
+            "cuisines": [
+            "Burgers",
+            "American"
+            ],
+            "avgRating": 4.2,
+            "parentId": "166",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "10K+",
+            "sla": {
+            "deliveryTime": 19,
+            "lastMileTravel": 1.3,
+            "serviceability": "SERVICEABLE",
+            "slaString": "19 mins",
+            "lastMileTravelString": "1.3 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-28 06:00:00",
+            "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {}
+            }
+            },
+            "aggregatedDiscountInfoV3": {
+            "header": "60% OFF",
+            "subHeader": "UPTO ₹120"
+            },
+            "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+            },
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+            "context": "seo-data-688e0256-d7a7-4532-a40d-6d63cab9e1a5"
+            },
+            "cta": {
+            "link": "https://www.swiggy.com/restaurants/burger-king-barave-road-kalyan-mumbai-203926",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+            },
+            {
+            "info": {
+            "id": "75107",
+            "name": "The Food Town",
+            "cloudinaryImageId": "8b8b9dbee19d8f10d953b8eb66e0173a",
+            "locality": "Sahjanad Chowk",
+            "areaName": "Kalyan",
+            "costForTwo": "₹700 for two",
+            "cuisines": [
+            "North Indian",
+            "Chinese",
+            "Italian",
+            "Continental",
+            "Desserts",
+            "Beverages",
+            "Snacks"
+            ],
+            "avgRating": 4.3,
+            "veg": true,
+            "parentId": "208534",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "1K+",
+            "sla": {
+            "deliveryTime": 29,
+            "lastMileTravel": 2.7,
+            "serviceability": "SERVICEABLE",
+            "slaString": "29 mins",
+            "lastMileTravelString": "2.7 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-27 23:00:00",
+            "opened": true
+            },
+            "badges": {
+            "imageBadges": [
+            {
+            "imageId": "v1695133679/badges/Pure_Veg111.png",
+            "description": "pureveg"
+            }
+            ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {
+            "badgeObject": [
+            {
+            "attributes": {
+            "description": "pureveg",
+            "imageId": "v1695133679/badges/Pure_Veg111.png"
+            }
+            }
+            ]
+            },
+            "textBased": {},
+            "textExtendedBadges": {}
+            }
+            },
+            "aggregatedDiscountInfoV3": {
+            "header": "50% OFF",
+            "subHeader": "UPTO ₹100"
+            },
+            "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+            },
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+            "context": "seo-data-688e0256-d7a7-4532-a40d-6d63cab9e1a5"
+            },
+            "cta": {
+            "link": "https://www.swiggy.com/restaurants/the-food-town-sahjanad-chowk-kalyan-mumbai-75107",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+            },
+            {
+            "info": {
+            "id": "183621",
+            "name": "The Good Bowl",
+            "cloudinaryImageId": "6e04be27387483a7c00444f8e8241108",
+            "locality": "Near Niraj Park",
+            "areaName": "Kalyan",
+            "costForTwo": "₹400 for two",
+            "cuisines": [
+            "Biryani",
+            "North Indian",
+            "Pastas",
+            "Punjabi",
+            "Desserts",
+            "Beverages"
+            ],
+            "avgRating": 3.8,
+            "parentId": "7918",
+            "avgRatingString": "3.8",
+            "totalRatingsString": "1K+",
+            "sla": {
+            "deliveryTime": 20,
+            "lastMileTravel": 1.5,
+            "serviceability": "SERVICEABLE",
+            "slaString": "20 mins",
+            "lastMileTravelString": "1.5 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-27 23:59:00",
+            "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {}
+            }
+            },
+            "aggregatedDiscountInfoV3": {
+            "header": "60% OFF",
+            "subHeader": "UPTO ₹110"
+            },
+            "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+            },
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+            "context": "seo-data-688e0256-d7a7-4532-a40d-6d63cab9e1a5"
+            },
+            "cta": {
+            "link": "https://www.swiggy.com/restaurants/the-good-bowl-near-niraj-park-kalyan-mumbai-183621",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+            },
+            {
+            "info": {
+            "id": "643762",
+            "name": "WeFit-Bowls, Salads & Sandwiches",
+            "cloudinaryImageId": "727ee82703c6fa71d1c954ead91dc20d",
+            "locality": "Chickanghar",
+            "areaName": "Near Birla College",
+            "costForTwo": "₹250 for two",
+            "cuisines": [
+            "Healthy Food",
+            "Salads",
+            "Keto",
+            "Snacks"
+            ],
+            "avgRating": 4.3,
+            "parentId": "355285",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "100+",
+            "sla": {
+            "deliveryTime": 30,
+            "lastMileTravel": 0.4,
+            "serviceability": "SERVICEABLE",
+            "slaString": "25-35 mins",
+            "lastMileTravelString": "0.4 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-28 02:00:00",
+            "opened": true
+            },
+            "badges": {
+            "textExtendedBadges": [
+            {
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "brand",
+            "fontColor": "#7E808C"
+            }
+            ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {
+            "badgeObject": [
+            {
+            "attributes": {
+            "description": "",
+            "fontColor": "#7E808C",
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "brand"
+            }
+            }
+            ]
+            }
+            }
+            },
+            "aggregatedDiscountInfoV3": {
+            "header": "40% OFF",
+            "subHeader": "UPTO ₹80"
+            },
+            "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+            },
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+            "context": "seo-data-688e0256-d7a7-4532-a40d-6d63cab9e1a5"
+            },
+            "cta": {
+            "link": "https://www.swiggy.com/restaurants/wefit-bowls-salads-and-sandwiches-chickanghar-near-birla-college-mumbai-643762",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+            },
+            {
+            "info": {
+            "id": "222684",
+            "name": "Great Punjab NX",
+            "cloudinaryImageId": "ivr6stmfxbg95g7at4po",
+            "areaName": "Kalyan",
+            "costForTwo": "₹400 for two",
+            "cuisines": [
+            "Chinese",
+            "Indian",
+            "Tandoor",
+            "Punjabi",
+            "Thai"
+            ],
+            "avgRating": 4.1,
+            "parentId": "453335",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "1K+",
+            "sla": {
+            "deliveryTime": 25,
+            "lastMileTravel": 1.4,
+            "serviceability": "SERVICEABLE",
+            "slaString": "25 mins",
+            "lastMileTravelString": "1.4 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-27 23:59:00",
+            "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {}
+            }
+            },
+            "aggregatedDiscountInfoV3": {
+            "header": "40% OFF",
+            "subHeader": "UPTO ₹80"
+            },
+            "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+            },
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            
     }
 ]
