@@ -3,7 +3,7 @@ const Navbar = () => {
     <div className='px-[200px] py-2 text-xl flex justify-between items-center border-b-2'>
       <div className="flex items-center space-x-1">
         <img
-          className="w-[60px] h-[60px] rounded-md"
+          className="w-[70px] h-[70px] rounded-md"
           alt="brand_logo"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZOX5_X_GNmsVPTdmVIBwbt2yNz9rPihllg&usqp=CAU"></img>
         <div className="text-3xl font-semibold text-[#F05455]">Yummy Tummy</div>
