@@ -27,6 +27,25 @@ const Body = () => {
     setAllRestaurants(filteredList);
   }
 
+  const veg = () => {
+    const filteredList = restaurants.filter(
+      (res) => res.info.veg === true
+    );
+    setAllRestaurants(filteredList);
+  }
+
+  const under300 = () => {
+    const filteredList = restaurants.map(
+      (res) => {
+        const costForTwoValue = parseInt(res.info.costForTwo.replace("₹","").split(" ")[0], 10);
+        return {...res, costForTwoValue};
+      }
+    ).filter(
+      (res) => res.costForTwoValue <= 300
+    );
+    setAllRestaurants(filteredList);
+  }
+
   return (
     <div className="px-[200px] py-[50px] space-y-2 space-x-1">
       <Button
@@ -38,6 +57,12 @@ const Body = () => {
       <Button
         onClick={quickDelivery}
         label="Fastest Delivery" />
+      <Button
+        onClick={veg}
+        label="Pure Veg Restaurants" />
+      <Button
+        onClick={under300}
+        label=" Upto ₹300 for Two" />
       <div
         className=" flex flex-wrap gap-9"
       >
