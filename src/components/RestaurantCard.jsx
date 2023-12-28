@@ -13,10 +13,10 @@ const RestaurantCard = (props) => {
     } = resData?.info;
     return (
         <div
-            className='flex flex-col items-center w-64 rounded-md space-y-1 cursor-pointer '
+            className='flex flex-col items-center w-[260px] rounded-md space-y-1 cursor-pointer '
         >
             <div><img
-                className='h-[180px] w-screen rounded-md bg-center bg-cover'
+                className='h-[200px] w-screen rounded-md bg-center bg-cover'
                 alt='restaurant_image'
                 src={resBanner + cloudinaryImageId}
             ></img></div>

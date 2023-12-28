@@ -2059,8 +2059,524 @@ export const restaurants = [
         "cta": {
             "link": "https://www.swiggy.com/restaurants/kfc-metro-junction-mall-kalyan-mumbai-239137",
             "type": "WEBLINK"
-        }
+        },
+        
 
-    }
+    },
+    {
+        "info": {
+            "id": "99051",
+            "name": "Baskin Robbins - Ice Cream Desserts",
+            "cloudinaryImageId": "85ccae4e3576f9330af102c46ca85395",
+            "locality": "Madhav Shristi",
+            "areaName": "Kalyan",
+            "costForTwo": "₹300 for two",
+            "cuisines": [
+            "Desserts",
+            "Beverages"
+            ],
+            "avgRating": 4.3,
+            "veg": true,
+            "parentId": "5588",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "1K+",
+            "sla": {
+            "deliveryTime": 12,
+            "lastMileTravel": 1.2,
+            "serviceability": "SERVICEABLE",
+            "slaString": "12 mins",
+            "lastMileTravelString": "1.2 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-28 03:00:00",
+            "opened": true
+            },
+            "badges": {
+            "imageBadges": [
+            {
+            "imageId": "v1695133679/badges/Pure_Veg111.png",
+            "description": "pureveg"
+            }
+            ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {
+            "badgeObject": [
+            {
+            "attributes": {
+            "description": "pureveg",
+            "imageId": "v1695133679/badges/Pure_Veg111.png"
+            }
+            }
+            ]
+            },
+            "textBased": {},
+            "textExtendedBadges": {}
+            }
+            },
+            "aggregatedDiscountInfoV3": {
+            "header": "30% OFF",
+            "subHeader": "UPTO ₹75"
+            },
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+    },
+    {
+        "info": {
+            "id": "183618",
+            "name": "Sweet Truth - Cake and Desserts",
+            "cloudinaryImageId": "81cf6bfe2760a45a0caf2e28716ca4d7",
+            "locality": "Near Niraj Park",
+            "areaName": "Kalyan",
+            "costForTwo": "₹450 for two",
+            "cuisines": [
+            "Snacks",
+            "Bakery",
+            "Desserts",
+            "Beverages"
+            ],
+            "avgRating": 4.1,
+            "parentId": "4444",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "500+",
+            "sla": {
+            "deliveryTime": 17,
+            "lastMileTravel": 1.5,
+            "serviceability": "SERVICEABLE",
+            "slaString": "17 mins",
+            "lastMileTravelString": "1.5 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-27 23:59:00",
+            "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {}
+            }
+            },
+            "aggregatedDiscountInfoV3": {
+            "header": "60% OFF",
+            "subHeader": "UPTO ₹110"
+            },
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {},
+            "cta": {
+            "link": "https://www.swiggy.com/restaurants/sweet-truth-cake-and-desserts-near-niraj-park-kalyan-mumbai-183618",
+            "type": "WEBLINK"
+            }
+    },
+    {
+        "info": {
+            "id": "332614",
+            "name": "Charcoal Eats - Biryani & Beyond",
+            "cloudinaryImageId": "d796c32a336dcce6814de6921d916966",
+            "locality": "SURESH TOWER",
+            "areaName": "Kalyan",
+            "costForTwo": "₹499 for two",
+            "cuisines": [
+            "Biryani",
+            "Kebabs",
+            "Hyderabadi",
+            "North Indian"
+            ],
+            "avgRating": 4.2,
+            "parentId": "5338",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "1K+",
+            "sla": {
+            "deliveryTime": 24,
+            "lastMileTravel": 1.5,
+            "serviceability": "SERVICEABLE",
+            "slaString": "24 mins",
+            "lastMileTravelString": "1.5 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-27 23:59:00",
+            "opened": true
+            },
+            "badges": {
+            "textExtendedBadges": [
+            {
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available",
+            "fontColor": "#7E808C"
+            }
+            ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {
+            "badgeObject": [
+            {
+            "attributes": {
+            "description": "",
+            "fontColor": "#7E808C",
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available"
+            }
+            }
+            ]
+            }
+            }
+            },
+            "aggregatedDiscountInfoV3": {
+            "header": "50% OFF",
+            "subHeader": "UPTO ₹100"
+            },
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {},
+            "cta": {
+            "link": "https://www.swiggy.com/restaurants/charcoal-eats-biryani-and-beyond-suresh-tower-kalyan-mumbai-332614",
+            "type": "WEBLINK"
+            }
+    },
+    {
+        "info": {
+            "id": "395280",
+            "name": "McDonald's Gourmet Burger Collection",
+            "cloudinaryImageId": "zyhbfwlphny1nu3jcmqu",
+            "locality": "Khadakpada Circle",
+            "areaName": "Kalyan",
+            "costForTwo": "₹600 for two",
+            "cuisines": [
+            "Burgers",
+            "Beverages",
+            "Cafe",
+            "Desserts"
+            ],
+            "avgRating": 4.3,
+            "parentId": "10761",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "100+",
+            "sla": {
+            "deliveryTime": 14,
+            "lastMileTravel": 1.3,
+            "serviceability": "SERVICEABLE",
+            "slaString": "14 mins",
+            "lastMileTravelString": "1.3 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-28 02:45:00",
+            "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {}
+            }
+            },
+            "aggregatedDiscountInfoV3": {},
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {},
+            "cta": {
+            "link": "https://www.swiggy.com/restaurants/mcdonalds-gourmet-burger-collection-khadakpada-circle-kalyan-mumbai-395280",
+            "type": "WEBLINK"
+            }
+    },
+    {
+        "info": {
+            "id": "239730",
+            "name": "Apsara Ice Creams",
+            "cloudinaryImageId": "ydrhbk3nzhhrojfopdzt",
+            "locality": "Dombivli",
+            "areaName": "Dombivli East",
+            "costForTwo": "₹150 for two",
+            "cuisines": [
+            "Ice Cream",
+            "Desserts"
+            ],
+            "avgRating": 4.5,
+            "veg": true,
+            "parentId": "35219",
+            "avgRatingString": "4.5",
+            "totalRatingsString": "1K+",
+            "sla": {
+            "deliveryTime": 30,
+            "lastMileTravel": 8.1,
+            "serviceability": "SERVICEABLE",
+            "slaString": "30 mins",
+            "lastMileTravelString": "8.1 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-28 01:00:00",
+            "opened": true
+            },
+            "badges": {
+            "textExtendedBadges": [
+            {
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available",
+            "fontColor": "#7E808C"
+            }
+            ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {
+            "badgeObject": [
+            {
+            "attributes": {
+            "description": "",
+            "fontColor": "#7E808C",
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available"
+            }
+            }
+            ]
+            }
+            }
+            },
+            "aggregatedDiscountInfoV3": {},
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {},
+            "cta": {
+            "link": "https://www.swiggy.com/restaurants/apsara-ice-creams-dombivli-dombivli-east-mumbai-239730",
+            "type": "WEBLINK"
+            }
+    },
+    {
+        "info": {
+            "id": "622130",
+            "name": "MOJO Pizza - 2X Toppings",
+            "cloudinaryImageId": "59b64f9bb67234987652437f21d379c2",
+            "locality": "Chickanghar",
+            "areaName": "Kalyan",
+            "costForTwo": "₹250 for two",
+            "cuisines": [
+            "Pizzas",
+            "Italian",
+            "Fast Food",
+            "Desserts"
+            ],
+            "avgRating": 4.5,
+            "parentId": "11329",
+            "avgRatingString": "4.5",
+            "totalRatingsString": "100+",
+            "sla": {
+            "deliveryTime": 19,
+            "lastMileTravel": 0.4,
+            "serviceability": "SERVICEABLE",
+            "slaString": "14-24 mins",
+            "lastMileTravelString": "0.4 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-28 02:00:00",
+            "opened": true
+            },
+            "badges": {
+            "textExtendedBadges": [
+            {
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available",
+            "fontColor": "#7E808C"
+            }
+            ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {
+            "badgeObject": [
+            {
+            "attributes": {
+            "description": "",
+            "fontColor": "#7E808C",
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available"
+            }
+            }
+            ]
+            }
+            }
+            },
+            "aggregatedDiscountInfoV3": {
+            "header": "₹100 OFF",
+            "subHeader": "ABOVE ₹249",
+            "discountTag": "FLAT DEAL"
+            },
+            "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+            },
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+            "context": "seo-data-cf479e34-1c08-4f7e-b5db-a14cce9b2b2f"
+            },
+            "cta": {
+            "link": "https://www.swiggy.com/restaurants/mojo-pizza-2x-toppings-chickanghar-kalyan-mumbai-622130",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+            },
+    },
+    {
+        "info": {
+            "id": "727465",
+            "name": "D Ultimate Burger",
+            "cloudinaryImageId": "a64749f4f34ab376dd137cd2bd2c2516",
+            "locality": "Chanakya Nagar",
+            "areaName": "Kalyan",
+            "costForTwo": "₹199 for two",
+            "cuisines": [
+            "Burgers",
+            "American",
+            "Fast Food",
+            "Desserts"
+            ],
+            "avgRating": 4,
+            "parentId": "414431",
+            "avgRatingString": "4.0",
+            "totalRatingsString": "50+",
+            "sla": {
+            "deliveryTime": 26,
+            "lastMileTravel": 3,
+            "serviceability": "SERVICEABLE",
+            "slaString": "26 mins",
+            "lastMileTravelString": "3.0 km",
+            "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+            "nextCloseTime": "2023-12-28 01:30:00",
+            "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+            "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {}
+            }
+            },
+            "aggregatedDiscountInfoV3": {
+            "header": "10% OFF",
+            "subHeader": "UPTO ₹40"
+            },
+            "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+            },
+            "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+            }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+            "context": "seo-data-cf479e34-1c08-4f7e-b5db-a14cce9b2b2f"
+            },
+            "cta": {
+            "link": "https://www.swiggy.com/restaurants/d-ultimate-burger-chanakya-nagar-kalyan-mumbai-727465",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+            },
+    },
+    
+    
 
 ]
