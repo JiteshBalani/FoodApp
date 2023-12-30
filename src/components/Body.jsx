@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard"
 import Button from "./Button";
 import ShimmerHome from "./ShimmerHome";
-import SearchBar from "./SearchBar";
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
