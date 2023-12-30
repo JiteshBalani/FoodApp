@@ -103,16 +103,16 @@ const Body = () => {
         label="All Restaurants" />
       <Button
         onClick={topRatedRes}
-        label="Top Rated Restaurants" />
+        label="&#11088; Top Rated Restaurants" />
       <Button
         onClick={quickDelivery}
-        label="Fastest Delivery" />
+        label="&#9889; Fastest Delivery" />
       <Button
         onClick={veg}
-        label="Pure Veg Restaurants" />
+        label="&#9752; Pure Veg Restaurants" />
       <Button
         onClick={under300}
-        label=" Upto ₹300 for Two" />
+        label="&#128523; Upto ₹300 for Two" />
       <div
         className=" flex flex-wrap gap-9"
       >
