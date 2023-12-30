@@ -1,11 +1,30 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard"
-import { restaurants } from "../utils/cardData";
 import Button from "./Button";
+import ShimmerHome from "./ShimmerHome";
 
 const Body = () => {
-  const [allRestaurants, setAllRestaurants] = useState(restaurants);
+  const [allRestaurants, setAllRestaurants] = useState([]);
 
+  useEffect(() => {
+    fetchData();
+  },[]);
+
+  const fetchData = async () => {
+
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.25005&lng=73.146236&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    const json = await data.json();
+
+    console.log(json);
+
+    //Optional Chaining
+    setAllRestaurants(json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
+  }
+
+  if (allRestaurants.length === 0) {
+    return <ShimmerHome/>
+  }
 
   const showAllRestaurants = () => {
     setAllRestaurants(restaurants);
@@ -47,7 +66,7 @@ const Body = () => {
   }
 
   return (
-    <div className="px-[200px] py-[50px] space-y-2 space-x-1">
+    <div className="px-[200px] py-[50px] space-y-5 space-x-1">
       <Button
         onClick={showAllRestaurants}
         label="All Restaurants" />
