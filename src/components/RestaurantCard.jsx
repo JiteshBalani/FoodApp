@@ -13,7 +13,7 @@ const RestaurantCard = (props) => {
     } = resData?.info;
     return (
         <div
-            className='flex flex-col items-center w-[260px] rounded-md space-y-1 cursor-pointer '
+            className='flex flex-col items-center w-[260px] rounded-md space-y-1 cursor-pointer shadow-sm shadow-[#f0545438]'
         >
             <div><img
                 className='h-[200px] w-screen rounded-md bg-center bg-cover'

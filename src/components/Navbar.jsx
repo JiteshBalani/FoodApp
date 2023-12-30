@@ -1,4 +1,9 @@
+import { useState } from "react"
+
 const Navbar = () => {
+
+  const [log, setLog] = useState("Login");
+
   return (
     <div className='px-[200px] py-2 text-xl flex justify-between items-center border-b-2'>
       <div className="flex items-center space-x-1">
@@ -29,6 +34,13 @@ const Navbar = () => {
             className="w-[20px] h-[20px]"
             src="https://static.thenounproject.com/png/2643287-200.png"></img>
           <div className="cursor-pointer">Help</div>
+        </div>
+        <div className="flex items-center space-x-1">
+          
+          <div className="cursor-pointer rounded-xl w-18 mx-2 px-2 py-1 bg-[#F05455] text-white text-center border-[#F05455] border-2" 
+          onClick={() => {
+          log === 'Login' ? setLog('Logout') : setLog('Login')
+          }}> {log} </div>
         </div>
         <div><img
           className="w-[40px] h-[40px] cursor-pointer"

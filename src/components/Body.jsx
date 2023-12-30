@@ -2,13 +2,17 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard"
 import Button from "./Button";
 import ShimmerHome from "./ShimmerHome";
+import SearchBar from "./SearchBar";
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
+  const[filteredRestaurants, setFilteredRestaurants] = useState([]);
+
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
-  },[]);
+  }, []);
 
   const fetchData = async () => {
 
@@ -19,54 +23,82 @@ const Body = () => {
 
     //Optional Chaining
     setAllRestaurants(json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setFilteredRestaurants(json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
   }
 
+  //Conditional Rendering
   if (allRestaurants.length === 0) {
-    return <ShimmerHome/>
+    return <ShimmerHome />
   }
 
   const showAllRestaurants = () => {
-    setAllRestaurants(restaurants);
+    setFilteredRestaurants(allRestaurants);
   }
 
   const topRatedRes = () => {
-    const filteredList = restaurants.filter(
+    const filteredList = allRestaurants.filter(
       (res) => res.info.avgRating >= 4
     );
     console.log(filteredList);
-    setAllRestaurants(filteredList);
+    setFilteredRestaurants(filteredList);
   }
 
   const quickDelivery = () => {
-    const filteredList = restaurants.filter(
+    const filteredList = allRestaurants.filter(
       (res) => res.info.sla.deliveryTime <= 20
     );
     console.log(filteredList);
-    setAllRestaurants(filteredList);
+    setFilteredRestaurants(filteredList);
   }
 
   const veg = () => {
-    const filteredList = restaurants.filter(
+    const filteredList = allRestaurants.filter(
       (res) => res.info.veg === true
     );
-    setAllRestaurants(filteredList);
+    setFilteredRestaurants(filteredList);
   }
 
   const under300 = () => {
-    const filteredList = restaurants.map(
+    const filteredList = allRestaurants.map(
       (res) => {
-        const costForTwoValue = parseInt(res.info.costForTwo.replace("₹","").split(" ")[0], 10);
-        return {...res, costForTwoValue};
+        const costForTwoValue = parseInt(res.info.costForTwo.replace("₹", "").split(" ")[0], 10);
+        return { ...res, costForTwoValue };
       }
     ).filter(
       (res) => res.costForTwoValue <= 300
     );
-    setAllRestaurants(filteredList);
+    setFilteredRestaurants(filteredList);
   }
 
-  return (
+  return allRestaurants.length === 0 ? <ShimmerHome /> : (
     <div className="px-[200px] py-[50px] space-y-5 space-x-1">
+
+    {/* Search Bar */}
+      <div
+        className="flex items-center space-x-3"
+      >
+        <input 
+          className="border-2 border-[#F05455] rounded-3xl p-2 px-4"
+          placeholder="Type Restaurant Name"
+          value={searchText}
+          onChange={(e) => {
+            setSearchText(e.target.value)
+          }}
+        ></input>
+        <button
+          className="rounded-3xl border-2 border-[#F05455] text-[#F05455] p-2 px-4 font-semibold"
+          onClick={() => {
+            console.log(searchText);
+            const filteredList = allRestaurants.filter(res => 
+              res.info.name.toLowerCase().includes(searchText.toLowerCase())
+            );
+            setFilteredRestaurants(filteredList);
+          }}
+        >Search</button>
+      </div>
+
+      {/* Filter Options */}
       <Button
         onClick={showAllRestaurants}
         label="All Restaurants" />
@@ -85,7 +117,7 @@ const Body = () => {
       <div
         className=" flex flex-wrap gap-9"
       >
-        {allRestaurants.map((restaurant) => (
+        {filteredRestaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
 
