@@ -1,5 +1,3 @@
-import Navbar from "./Navbar"
-import Footer from "./Footer"
 import { useEffect, useState } from "react"
 import RestaurantCard from "./RestaurantCard"
 import Button from "./Button"
@@ -66,7 +64,6 @@ const Offers = () => {
     }
     return restaurants.length === 0 ? <ShimmerHome/> : (
         <div>
-            <Navbar />
             <div className="px-[200px] py-[50px] space-y-5 space-x-1">
                 <div>Home/Offers</div>
                 {/* Search Bar*/}
@@ -123,7 +120,6 @@ const Offers = () => {
 
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

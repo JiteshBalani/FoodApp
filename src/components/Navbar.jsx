@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -19,21 +20,21 @@ const Navbar = () => {
             alt="offer-icon"
             className="w-[20px] h-[20px]"
             src="https://cdn-icons-png.flaticon.com/512/3508/3508366.png"></img>
-          <div className="cursor-pointer">Home</div>
+          <div className="cursor-pointer"><Link to="/">Home</Link></div>
         </div>
         <div className="flex items-center space-x-1">
           <img
             alt="offer-icon"
             className="w-[20px] h-[20px]"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOq9jCIZLTV9PhvgX_Y-oj6MUjba9Vm37q2g&usqp=CAU"></img>
-          <div className="cursor-pointer">Offers</div>
+          <div className="cursor-pointer"><Link to="/offers">Offers</Link></div>
         </div>
         <div className="flex items-center space-x-1">
           <img
             alt="offer-icon"
             className="w-[20px] h-[20px]"
             src="https://static.thenounproject.com/png/2643287-200.png"></img>
-          <div className="cursor-pointer">Help</div>
+          <div className="cursor-pointer"><Link to="/help">Help</Link></div>
         </div>
         <div className="flex items-center space-x-1">
           

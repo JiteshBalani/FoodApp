@@ -1,10 +1,6 @@
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-
 const Help = () => {
     return (
         <div>
-            <Navbar />
             <div className="px-[200px] py-[50px] space-y-5 space-x-1">
                 <div className="text-lg space-y-2">
                 <div>Home/Help</div>
@@ -110,7 +106,6 @@ const Help = () => {
                     <p className="text-[#F05455] text-2xl font-semibold pt-[50px]">Thanks for using our Food Delivery app! We hope you enjoy the convenience of having delicious meals delivered to your doorstep.</p>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

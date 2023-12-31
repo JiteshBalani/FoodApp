@@ -1,19 +1,25 @@
 import React from 'react'
+import ReactDOM from 'react-dom/client' 
 import Navbar from './components/Navbar'
 import Body from './components/Body'
 import Footer from './components/Footer'
 import Offers from './components/Offers'
 import Help from './components/Help'
+import ErrorPage from './components/ErrorPage'
+import { Outlet } from 'react-router-dom'
 
-function App() {
+const App = () => {
 
   return (
     <>
     <Navbar/>
-    <Body/>
+    <Outlet/>
     <Footer/>
     </>
-  )
-}
+  );
+};
+
+
+
 
 export default App
