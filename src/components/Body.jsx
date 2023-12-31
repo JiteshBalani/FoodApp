@@ -97,6 +97,8 @@ const Body = () => {
         >Search</button>
       </div>
 
+      <div className="font-bold text-2xl">Popular Restaurants Near You</div>
+
       {/* Filter Options */}
       <Button
         onClick={showAllRestaurants}

@@ -1,7 +1,6 @@
 import { resBanner } from "../utils/common";
 
-const RestaurantCard = (props) => {
-    const { resData } = props;
+const RestaurantCard = ({resData, offer = {}}) => {
 
     const {
         cloudinaryImageId,
@@ -9,17 +8,27 @@ const RestaurantCard = (props) => {
         avgRating,
         sla: { deliveryTime },
         cuisines,
-        costForTwo
-    } = resData?.info;
+        costForTwo,
+    } = resData?.info || {};
+
+    const {
+        aggregatedDiscountInfoV3: {header, subHeader} = {}
+    } =offer?.info || {};
     return (
         <div
             className='flex flex-col items-center w-[260px] rounded-md space-y-1 cursor-pointer shadow-sm shadow-[#f0545438]'
         >
-            <div><img
-                className='h-[200px] w-screen rounded-md bg-center bg-cover'
-                alt='restaurant_image'
-                src={resBanner + cloudinaryImageId}
-            ></img></div>
+            <div className="relative ">
+                <div className="flex gap-1 absolute inset-x-0 bottom-0 text-white bg-black bg-opacity-15 pl-1 font-extrabold text-xl shadow-inner ">
+                    <h1 className="top">{header}</h1>
+                    <h1>{subHeader}</h1>
+                </div>
+                <img
+                    className='h-[200px] w-screen rounded-md bg-center bg-cover'
+                    alt='restaurant_image'
+                    src={resBanner + cloudinaryImageId}
+                ></img>
+            </div>
             <div className='text-xl font-semibold text-center w-full truncate'>{name}</div>
             <div className='flex text-lg font-semibold space-x-3'>
                 <div className='flex '><h2 className='text-green-600'>&#9734;</h2> {avgRating}</div>
