@@ -13,7 +13,7 @@ const RestaurantCard = ({resData, offer = {}}) => {
 
     const {
         aggregatedDiscountInfoV3: {header, subHeader} = {}
-    } =offer?.info || {};
+    } = offer?.info || {};
     return (
         <div
             className='flex flex-col items-center w-[260px] rounded-md space-y-1 cursor-pointer shadow-sm shadow-[#f0545438]'

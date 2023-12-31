@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Body from './components/Body'
 import Footer from './components/Footer'
 import Offers from './components/Offers'
+import Help from './components/Help'
 
 function App() {
 
