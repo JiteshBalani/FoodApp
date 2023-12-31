@@ -3,6 +3,7 @@ import Footer from "./Footer"
 import { useEffect, useState } from "react"
 import RestaurantCard from "./RestaurantCard"
 import Button from "./Button"
+import ShimmerHome from "./ShimmerHome"
 
 const Offers = () => {
 
@@ -63,7 +64,7 @@ const Offers = () => {
         );
         setFilteredRestaurants(filteredList);
     }
-    return (
+    return restaurants.length === 0 ? <ShimmerHome/> : (
         <div>
             <Navbar />
             <div className="px-[200px] py-[50px] space-y-5 space-x-1">
@@ -95,7 +96,7 @@ const Offers = () => {
                 {/* Filter Options */}
 
                 <div className="font-bold text-2xl">Restaurants With Great Offers Near You</div>
-                
+
                 <Button
                     onClick={showAllRestaurants}
                     label="All Restaurants" />
