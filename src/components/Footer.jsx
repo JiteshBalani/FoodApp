@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
         <div
-            className='flex bg-black text-white px-[200px] py-[25px] justify-around'
+            className='flex bg-black text-white px-[200px] py-[25px] justify-around space-x-2 xs:flex-col'
         >
             {/* SECTION 1 STARTS HERE. */}
 

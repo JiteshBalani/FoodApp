@@ -19,7 +19,7 @@ const RestaurantCard = ({resData, offer = {}}) => {
             className='flex flex-col items-center w-[260px] rounded-md space-y-1 cursor-pointer shadow-sm shadow-[#f0545438]'
         >
             <div className="relative ">
-                <div className="flex gap-1 absolute inset-x-0 bottom-0 text-white bg-black bg-opacity-15 pl-1 font-extrabold text-xl shadow-inner ">
+                <div className="flex gap-1 absolute inset-x-0 bottom-0 text-white bg-black bg-opacity-15 pl-1 font-bold text-xl shadow-inner ">
                     <h1 className="top">{header}</h1>
                     <h1>{subHeader}</h1>
                 </div>
