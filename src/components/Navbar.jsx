@@ -16,7 +16,7 @@ const Navbar = () => {
             alt="yummy-tummy_logo"
             src={LogoNavbar}
             ></img>
-          <div className="yummy-tummy-title text-3xl font-black ">yummy-tummy</div>
+          <div className="yummy-tummy-title text-3xl font-black pb-3">yummy-tummy</div>
         </Link>
       </div>
       <div className="flex space-x-8 pr-5 text-[#F05455] font-semibold">

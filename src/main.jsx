@@ -7,6 +7,7 @@ import Offers from './components/Offers.jsx'
 import Help from './components/Help.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Body from './components/Body.jsx'
+import Menu from './components/Menu.jsx'
 
 const appRouter = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const appRouter = createBrowserRouter([
       {
         path: '/help',
         element: <Help/>
+      },
+      {
+        path: '/restaurants/:resId',
+        element: <Menu/>
       }
     ],
     errorElement: <ErrorPage/>
