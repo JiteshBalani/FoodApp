@@ -7,12 +7,14 @@ const Navbar = () => {
 
   return (
     <div className='px-[200px] py-2 text-xl flex justify-between items-center border-b-2'>
-      <div className="flex items-center space-x-1">
-        <img
-          className="w-[70px] h-[70px] rounded-md"
-          alt="brand_logo"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZOX5_X_GNmsVPTdmVIBwbt2yNz9rPihllg&usqp=CAU"></img>
-        <div className="text-3xl font-semibold text-[#F05455]">Yummy Tummy</div>
+      <div className="flex items-center space-x-1 cursor-pointer">
+        <Link to="/" className="flex items-center space-x-1">
+          <img
+            className="w-[70px] h-[70px] rounded-md"
+            alt="brand_logo"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZOX5_X_GNmsVPTdmVIBwbt2yNz9rPihllg&usqp=CAU"></img>
+          <div className="text-3xl font-semibold text-[#F05455]">Yummy Tummy</div>
+        </Link>
       </div>
       <div className="flex space-x-8 pr-5 text-[#F05455] font-semibold">
         <div className="flex items-center space-x-1">
@@ -37,11 +39,11 @@ const Navbar = () => {
           <div className="cursor-pointer"><Link to="/help">Help</Link></div>
         </div>
         <div className="flex items-center space-x-1">
-          
-          <div className="cursor-pointer rounded-xl w-18 mx-2 px-2 py-1 bg-[#F05455] text-white text-center border-[#F05455] border-2" 
-          onClick={() => {
-          log === 'Login' ? setLog('Logout') : setLog('Login')
-          }}> {log} </div>
+
+          <div className="cursor-pointer rounded-xl w-18 mx-2 px-2 py-1 bg-[#F05455] text-white text-center border-[#F05455] border-2"
+            onClick={() => {
+              log === 'Login' ? setLog('Logout') : setLog('Login')
+            }}> {log} </div>
         </div>
         <div><img
           className="w-[40px] h-[40px] cursor-pointer"

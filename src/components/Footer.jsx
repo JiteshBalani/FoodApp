@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Footer = () => {
 
@@ -9,7 +8,7 @@ const Footer = () => {
 
     return (
         <div
-            className='flex bg-black text-white px-[200px] py-[25px] justify-around'
+            className='flex bg-black text-white px-[200px] py-[25px] justify-around border-t-4 border-gray-300'
         >
             {/* SECTION 1 STARTS HERE. */}
 
@@ -35,7 +34,7 @@ const Footer = () => {
                     <div className='cursor-pointer'>YT Genie</div>
                 </div>
             </div>
-            {/* ========================================================================== Copyright +Company section starts here. */}
+            {/* ========================================================================== Copyright + Company section starts here. */}
             {/* SECTION 1 ENDS HERE. */}
 
 
