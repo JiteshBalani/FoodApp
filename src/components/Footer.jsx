@@ -1,3 +1,4 @@
+import LogoFooter from './LogoFooter.png'
 
 const Footer = () => {
 
@@ -19,8 +20,9 @@ const Footer = () => {
                         <img
                             className="w-[70px] h-[70px] rounded-md"
                             alt="brand_logo"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZOX5_X_GNmsVPTdmVIBwbt2yNz9rPihllg&usqp=CAU"></img>
-                        <div className='text-3xl font-bold text-[#F05455]'>Yummy Tummy</div>
+                            src={LogoFooter}
+                            ></img>
+                        <div className='yummy-tummy-title text-3xl font-bold text-[#F05455]'>yummy-tummy</div>
                     </div>
                     <div className='text-gray-400'>&copy; {currentYear} Yummy Tummy Technologies Pvt. Ltd.</div>
                 </div>

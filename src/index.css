@@ -1,5 +1,15 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {font-family: 'Dancing Script', cursive;
+font-family: 'Figtree', sans-serif;
+}
 
+.yummy-tummy-title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 56px;
+    margin-left: 5px;
+}
