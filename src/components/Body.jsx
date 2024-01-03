@@ -111,7 +111,7 @@ const Body = () => {
         label="&#9889; Fastest Delivery" />
       <Button
         onClick={veg}
-        label="&#x2618; Pure Veg Restaurants" />
+        label="&#129361; Pure Veg Restaurants" />
       <Button
         onClick={under300}
         label="&#128523; Upto ₹300 for Two" />

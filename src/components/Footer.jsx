@@ -15,14 +15,14 @@ const Footer = () => {
 
             {/* Copyright +Company section starts here. */}
             <div className='flex justify-between space-x-32'>
-                <div className='flex flex-col space-y-[6px]'>
+                <div className='flex flex-col space-y-[6px] items-center'>
                     <div className='flex items-center space-x-2'>
                         <img
                             className="w-[70px] h-[70px] rounded-md"
                             alt="brand_logo"
                             src={LogoFooter}
                             ></img>
-                        <div className='yummy-tummy-title text-3xl font-bold text-[#F05455]'>yummy-tummy</div>
+                        <div className='yummy-tummy-title text-3xl font-bold text-[#F05455] pb-3'>yummy-tummy</div>
                     </div>
                     <div className='text-gray-400'>&copy; {currentYear} Yummy Tummy Technologies Pvt. Ltd.</div>
                 </div>
