@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import RestaurantCard from "./RestaurantCard"
 import Button from "./Button"
 import ShimmerHome from "./ShimmerHome"
+import { Link } from "react-router-dom"
 
 const Offers = () => {
 
@@ -62,7 +63,7 @@ const Offers = () => {
         );
         setFilteredRestaurants(filteredList);
     }
-    return restaurants.length === 0 ? <ShimmerHome/> : (
+    return restaurants.length === 0 ? <ShimmerHome /> : (
         <div>
             <div className="px-[200px] py-[50px] space-y-5 space-x-1">
                 <div>Home/Offers</div>
@@ -115,7 +116,8 @@ const Offers = () => {
                     className=" flex flex-wrap gap-9"
                 >
                     {filteredRestaurants.map((restaurant) => (
-                        <RestaurantCard key={restaurant.info.id} resData={restaurant} offer={restaurant} />
+                        <Link to={"/restaurants/" + restaurant?.info.id} key={restaurant.info.id}><RestaurantCard resData={restaurant} offer={restaurant} /></Link>
+
                     ))}
 
                 </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard"
 import Button from "./Button";
 import ShimmerHome from "./ShimmerHome";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -93,11 +94,13 @@ const Body = () => {
               res.info.name.toLowerCase().includes(searchText.toLowerCase())
             );
             setFilteredRestaurants(filteredList);
+            setSearchText("");
           }}
         >Search</button>
       </div>
 
       <div className="font-bold text-2xl">Popular Restaurants Near You</div>
+
 
       {/* Filter Options */}
       <Button
@@ -119,7 +122,8 @@ const Body = () => {
         className=" flex flex-wrap gap-9"
       >
         {filteredRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          <Link to={"/restaurants/"+restaurant?.info.id} key={restaurant.info.id}><RestaurantCard resData={restaurant} /></Link>
+          
         ))}
 
       </div>
