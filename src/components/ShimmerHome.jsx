@@ -4,18 +4,18 @@ const ShimmerHome = () => {
     const Card = () => {
         return (
             <div
-                className='flex flex-col items-center w-[260px] rounded-md space-y-1 cursor-pointer bg-gray-200 h-[320px] shadow-md'
+                className='flex flex-col items-center w-[260px] rounded-xl space-y-1 cursor-pointer bg-gray-200 h-[320px] shadow-md'
             >
                 <div><div
-                    className='h-[200px] w-screen rounded-md bg-center bg-cover'
-                ></div></div>
-                <div className='text-xl font-semibold text-center w-full truncate'></div>
-                <div className='flex text-lg font-semibold space-x-3'>
-                    <div className='flex '><h2 className='text-green-600'></h2> </div>
+                    className='h-[200px] w-full border-3 rounded-md bg-center bg-cover animate-pulse bg-gray-300 text-gray-300'
+                >dghnfjhf hdghd dndfndfndfvbhdfbndfdfbh</div></div>
+                <div className='text-xl font-semibold text-center w-full truncate animate-pulse bg-gray-300 text-gray-300'>sdghdsfhfdhff</div>
+                <div className='flex text-lg font-semibold space-x-3 animate-pulse'>
+                    <div className='flex '><h2 className='animate-pulse bg-gray-300 text-gray-300'>text-gray-300</h2> </div>
                     <div></div>
                 </div>
-                <div className='text-md text-center font-thin truncate w-full'></div>
-                <div className="text-md text-center text-[#F05455] font-semibold"></div>
+                <div className='text-gray-300 text-md text-center font-thin truncate w-full animate-pulse bg-gray-300'>text-gray-300</div>
+                <div className="text-gray-300 text-md text-center font-semibold animate-pulse bg-gray-300">dhfg</div>
 
 
             </div>
