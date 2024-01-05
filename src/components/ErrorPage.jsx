@@ -10,7 +10,7 @@ const ErrorPage = () => {
   };
 
   return (
-    <div className="error px-[200px] py-[100px] space-y-5 flex flex-col justify-start items-center bg-gray-400 h-screen">
+    <div className="error px-[200px] py-[100px] space-y-5 flex flex-col justify-start items-center h-screen">
       <img
         className="w-[300px]"
         alt="Error_Image"

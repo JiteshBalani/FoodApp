@@ -59,9 +59,9 @@ const Menu = () => {
       </div>
       <div className=' text-gray-500 border-b-2 border-dashed border-gray-300 pb-1'> {message || ""}</div>
       <div className='font-[610] text-gray-700'><span className='text-xl'>&#128338;	</span> {deliveryTime} MINS  <span className=' ml-3 text-md border-2 rounded-full border-gray-700 px-1'>&#8377;</span> {costForTwoMessage}</div>
-      <div className='border-t-4'>
         {/* ------------------------------------------------------------------------------------------------Restaurant info ends here */}
 
+      <div className='border-t-4'>
         <div className='pt-6 font-[625] text-xl'>{category.title} ({menuItem.length})</div>
 
         {menuItem.map((item) => {
@@ -79,7 +79,7 @@ const Menu = () => {
                 <button className='px-3 py-4 text-green-600 border-2 rounded-lg font-semibold cursor-pointer shadow-xl'>ADD</button>
               </div>
             </div>
-            
+          
           )
         })}
         <div className='border-b-[12px] border-gray-300'></div>

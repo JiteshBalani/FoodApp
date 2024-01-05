@@ -72,7 +72,7 @@ const Offers = () => {
                     className="flex items-center space-x-3"
                 >
                     <input
-                        className="border-2 border-[#F05455] rounded-3xl p-2 px-4"
+                        className="border-2 border-[#F05455] rounded-md p-2 px-4"
                         placeholder="Type Restaurant Name"
                         value={searchText}
                         onChange={(e) => {
@@ -80,7 +80,7 @@ const Offers = () => {
                         }}
                     ></input>
                     <button
-                        className="rounded-3xl border-2 border-[#F05455] text-[#F05455] p-2 px-4 font-semibold"
+                        className="rounded-md border-2 border-[#F05455] text-[#F05455] p-2 px-4 font-semibold"
                         onClick={() => {
                             console.log(searchText);
                             const filteredList = restaurants.filter(res =>

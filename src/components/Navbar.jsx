@@ -43,7 +43,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center space-x-1">
 
-          <div className="cursor-pointer rounded-xl w-18 mx-2 px-2 py-1 bg-[#F05455] text-white text-center border-[#F05455] border-2"
+          <div className="cursor-pointer rounded-md w-22 mx-2 px-2 py-1 border-[#F05455] bg-gray-200 text-center text-black border-2"
             onClick={() => {
               log === 'Login' ? setLog('Logout') : setLog('Login')
             }}> {log} </div>

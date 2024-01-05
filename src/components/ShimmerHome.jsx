@@ -24,8 +24,8 @@ const ShimmerHome = () => {
     return (
         <div className="px-[200px] py-[50px] space-y-5 space-x-1">
             <div className="flex items-center space-x-3">
-                <input className="border-2 border-gray-200 rounded-3xl p-2 px-4 bg-gray-200"></input>
-                <button className="rounded-3xl border-2 border-gray-200 bg-gray-200 text-[#F05455] p-2 px-4 w-24 h-10 font-semibold"></button>
+                <input className="border-2 border-gray-200 rounded-md p-2 px-4 bg-gray-200"></input>
+                <button className="rounded-md border-2 border-gray-200 bg-gray-200 text-[#F05455] p-2 px-4 w-24 h-10 font-semibold"></button>
             </div>
             <div className="text-gray-200 space-x-1">
                 <Button label='All Restaurants'/>
