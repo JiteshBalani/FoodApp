@@ -4,10 +4,13 @@ import App from './App.jsx'
 import './index.css'
 import ErrorPage from './components/ErrorPage.jsx'
 import Offers from './components/Offers.jsx'
-import Help from './components/Help.jsx'
+// import Help from './components/Help.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Body from './components/Body.jsx'
 import Menu from './components/Menu.jsx'
+import ShimmerHelp from './components/ShimmerHelp.jsx'
+
+const Help = lazy(() => import('./components/Help.jsx'));
 
 const appRouter = createBrowserRouter([
   {
@@ -24,7 +27,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: '/help',
-        element: <Help/>
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Help />
+          </Suspense>
+        ),
       },
       {
         path: '/restaurants/:resId',
