@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import { MENU_API } from '../utils/common';
+import useRestaurantMenu from '../utils/useRestaurantMenu';
 import ShimmerMenu from './ShimmerMenu';
 import { useParams } from 'react-router-dom';
 
@@ -7,20 +6,7 @@ const Menu = () => {
 
   const { resId } = useParams();
 
-  const [resInfo, setResInfo] = useState(null);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const data = await fetch(MENU_API+resId+"&catalog_qa=undefined&submitAction=ENTER");
-    const json = await data.json();
-
-    console.log(json);
-    setResInfo(json.data);
-
-  };
+  const resInfo = useRestaurantMenu(resId);
 
   if (resInfo === null) return <ShimmerMenu />;
 
@@ -46,6 +32,7 @@ const Menu = () => {
     <div className="px-[500px] py-[50px] space-y-5 space-x-1 bg-gray-100">
 
       {/* Restaurant info starts here */}
+      
       <div className='flex items-center justify-between'>
         <div>
           <div className='text.xl font-semibold text-xl'>{name}</div>
