@@ -66,7 +66,7 @@ const Offers = () => {
     return restaurants.length === 0 ? <ShimmerHome /> : (
         <div>
             <div className="px-[200px] py-[50px] space-y-5 space-x-1">
-                <div>Home/Offers</div>
+                <div><Link className="text-blue-500" to="/" >Home</Link>/Offers</div>
                 {/* Search Bar*/}
                 <div
                     className="flex items-center space-x-3"

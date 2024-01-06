@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const Help = () => {
     return (
         <div>
             <div className="px-[200px] py-[50px] space-y-5 space-x-1">
                 <div className="text-lg space-y-2">
-                <div>Home/Help</div>
+                <div><Link className="text-blue-500" to="/">Home</Link>/Help</div>
                     <h1 className="text-3xl font-extrabold rounded-lg text-[#F05455]">Help Center</h1>
                     <p className="text-left text-xl font-semibold pt-[20px]">Welcome to our Help Center! We're here to assist you in making your food delivery experience smooth and enjoyable. If you have any questions or concerns, you'll likely find the answers here. If not, feel free to reach out to our support team for personalized assistance.</p>
 
