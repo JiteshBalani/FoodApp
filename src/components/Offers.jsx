@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
+import { offersPageAPI } from "../utils/common"
 import RestaurantCard from "./RestaurantCard"
 import Button from "./Button"
 import ShimmerHome from "./ShimmerHome"
 import { Link } from "react-router-dom"
+import useOnlineStatus from "../utils/useOnlineStatus"
 
 const Offers = () => {
 
@@ -16,7 +18,7 @@ const Offers = () => {
     }, []);
 
     const fetchData = async () => {
-        const data = await fetch("https://www.swiggy.com/api/seo/getListing?lat=19.25005&lng=73.146236")
+        const data = await fetch(offersPageAPI);
         const json = await data.json();
 
         console.log(json);
@@ -63,6 +65,20 @@ const Offers = () => {
         );
         setFilteredRestaurants(filteredList);
     }
+
+    const onlineStatus = useOnlineStatus();
+
+    if (onlineStatus === false) {
+        return (
+            <div
+                className="h-screen px-[200px] py-[50px] flex flex-col justify-center items-center space-y-12  "
+            >
+                <div className="text-[#F05455] font-black italic text-3xl">Hi there!</div>
+                <p className="text-xl">Looks like you're offline. Please check your connection</p>
+            </div>
+        )
+    }
+
     return restaurants.length === 0 ? <ShimmerHome /> : (
         <div>
             <div className="px-[200px] py-[50px] space-y-5 space-x-1">

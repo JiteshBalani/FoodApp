@@ -1,11 +1,25 @@
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Help = () => {
+
+    const onlineStatus = useOnlineStatus();
+
+    if (onlineStatus === false) {
+        return (
+            <div
+                className="h-screen px-[200px] py-[50px] flex flex-col justify-center items-center space-y-12  "
+            >
+                <div className="text-[#F05455] font-black italic text-3xl">Hi there!</div>
+                <p className="text-xl">Looks like you're offline. Please check your connection</p>
+            </div>
+        )
+    }
     return (
         <div>
             <div className="px-[200px] py-[50px] space-y-5 space-x-1">
                 <div className="text-lg space-y-2">
-                <div><Link className="text-blue-500" to="/">Home</Link>/Help</div>
+                    <div><Link className="text-blue-500" to="/">Home</Link>/Help</div>
                     <h1 className="text-3xl font-extrabold rounded-lg text-[#F05455]">Help Center</h1>
                     <p className="text-left text-xl font-semibold pt-[20px]">Welcome to our Help Center! We're here to assist you in making your food delivery experience smooth and enjoyable. If you have any questions or concerns, you'll likely find the answers here. If not, feel free to reach out to our support team for personalized assistance.</p>
 

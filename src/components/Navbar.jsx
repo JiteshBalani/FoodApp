@@ -2,10 +2,13 @@ import { useState } from "react"
 import { Link } from "react-router-dom";
 import '../index.css'
 import LogoNavbar from './LogoNavbar.png'
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Navbar = () => {
 
   const [log, setLog] = useState("Login");
+
+  const onlineStatus = useOnlineStatus();
 
   return (
     <div className='px-[200px] py-2 text-xl flex justify-between items-center border-b-2'>
@@ -20,6 +23,9 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex space-x-8 pr-5 text-[#F05455] font-semibold">
+      <div className="flex items-center space-x-1">
+          <div className="cursor-pointer underline-offset-4">{onlineStatus === true ? "🟢 Active" : "🔴 Offline"}</div>
+        </div>
         <div className="flex items-center space-x-1">
           <img
             alt="offer-icon"
