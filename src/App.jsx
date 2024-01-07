@@ -6,7 +6,7 @@ import Offers from './components/Offers'
 import Menu from './components/Menu'
 // import Help from './components/Help'
 import ErrorPage from './components/ErrorPage'
-import { Outlet } from 'react-router-dom'
+import { createBrowserRouter, Outlet } from 'react-router-dom'
 
 const Help = lazy(() => import("./components/Help.jsx"));
 
