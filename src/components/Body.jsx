@@ -23,16 +23,11 @@ const Body = () => {
 
     console.log(json);
 
-    //Optional Chaining
-    setAllRestaurants(json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || json?.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setFilteredRestaurants(json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || json?.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    //Optional Chaining: something?.something1?.product?.info?.name
+    setAllRestaurants(json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || json?.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
+    setFilteredRestaurants(json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || json?.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
 
   }
-
-  //Conditional Rendering
-  // if (allRestaurants.length === 0) {
-  //   return <ShimmerHome />
-  // }
 
   const showAllRestaurants = () => {
     setFilteredRestaurants(allRestaurants);
@@ -87,7 +82,7 @@ const Body = () => {
   }
 
   return allRestaurants.length === 0 ? <ShimmerHome /> : (
-    <div className="px-[200px] py-[50px] space-y-5 space-x-1">
+    <div className="px-[10vw] py-[50px] space-y-5 space-x-1">
 
       {/* Search Bar */}
       <div

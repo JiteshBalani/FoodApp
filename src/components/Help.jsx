@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import ShimmerHelp from "./ShimmerHelp";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Help = () => {

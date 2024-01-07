@@ -26,13 +26,21 @@ const Menu = () => {
   } = resInfo?.cards[0]?.card?.card?.info || {};
 
   const menuItem = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards || [];
-  const category = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card || "Menu";
+  const category = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards || "Menu";
+  console.log("category", resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+
+  const categories =
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c.card?.["card"]?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
 
   return (
-    <div className="px-[500px] py-[50px] space-y-5 space-x-1 bg-gray-100">
+    <div className="px-[25vw] py-[50px] space-y-5 space-x-1 bg-gray-100">
 
       {/* Restaurant info starts here */}
-      
+
       <div className='flex items-center justify-between'>
         <div>
           <div className='text.xl font-semibold text-xl'>{name}</div>
@@ -46,30 +54,46 @@ const Menu = () => {
       </div>
       <div className=' text-gray-500 border-b-2 border-dashed border-gray-300 pb-1'> {message || ""}</div>
       <div className='font-[610] text-gray-700'><span className='text-xl'>&#128338;	</span> {deliveryTime} MINS  <span className=' ml-3 text-md border-2 rounded-full border-gray-700 px-1'>&#8377;</span> {costForTwoMessage}</div>
-        {/* ------------------------------------------------------------------------------------------------Restaurant info ends here */}
+
+      {/* ------------------------------------------------------------------------------------------------Restaurant info ends here */}
+
+      
+
+{/* Menu Category and Category Items starts here  */}
 
       <div className='border-t-4'>
-        <div className='pt-6 font-[625] text-xl'>{category.title} ({menuItem.length})</div>
+      
+        {categories.map((heading, idx) =>
+          <>
+            <div key={idx} className='pt-6 font-[625] text-xl'>{heading.card?.card?.title} ({heading.card?.card?.itemCards?.length})</div>
+            {heading.card?.card?.itemCards?.map((item) => {
 
-        {menuItem.map((item) => {
+              return (
 
-          return (
-            
-            <div key={item.card?.info?.id} className='flex justify-between border-b-[1px] py-8 items-center border-gray-300'>
-              <div>
-                <div className={`text-xs font-semibold ${getVegNonVegColor(item.card?.info?.itemAttribute.vegClassifier)}`}>{item.card?.info?.itemAttribute.vegClassifier}</div>
-                <div className='text-lg font-semibold'>{item.card?.info?.name}</div>
-                <div className='text-sm'>&#8377; {item.card?.info?.defaultPrice / 100 || item.card?.info?.price / 100}</div>
-                <div className='font-thin text-gray-500 pt-4 pr-10'>{item.card?.info?.description}</div>
-              </div>
-              <div>
-                <button className='px-3 py-4 text-green-600 border-2 rounded-lg font-semibold cursor-pointer shadow-xl'>ADD</button>
-              </div>
-            </div>
-          
-          )
-        })}
-        <div className='border-b-[12px] border-gray-300'></div>
+                <div key={item.card?.info?.id} className='flex justify-between border-b-[1px] py-8 items-center border-gray-300'>
+                  <div>
+                    <div className={`text-xs font-semibold ${getVegNonVegColor(item.card?.info?.itemAttribute.vegClassifier)}`}>{item.card?.info?.itemAttribute.vegClassifier}</div>
+                    <div className='text-lg font-semibold'>{item.card?.info?.name}</div>
+                    <div className='text-sm'>&#8377; {item.card?.info?.defaultPrice / 100 || item.card?.info?.price / 100}</div>
+                    <div className='font-thin text-gray-500 pt-4 pr-10'>{item.card?.info?.description}</div>
+                  </div>
+                  <div>
+                    <button className='px-3 py-4 text-green-600 border-2 rounded-lg font-semibold cursor-pointer shadow-xl'>ADD</button>
+                  </div>
+                </div>
+
+              )
+            })}
+            <div className='border-b-[12px] border-gray-300'></div>
+          </>
+
+
+        )}
+{/* ---------------------------------------------------------------------------------------Menu Category and Category Items ends here  */}
+
+
+
+        
 
       </div>
     </div>
