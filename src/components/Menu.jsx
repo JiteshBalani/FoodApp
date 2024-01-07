@@ -25,10 +25,6 @@ const Menu = () => {
     costForTwoMessage,
   } = resInfo?.cards[0]?.card?.card?.info || {};
 
-  const menuItem = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards || [];
-  const category = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards || "Menu";
-  console.log("category", resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-
   const categories =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
@@ -36,6 +32,7 @@ const Menu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
+    
   return (
     <div className="px-[25vw] py-[50px] space-y-5 space-x-1 bg-gray-100">
 
@@ -52,25 +49,28 @@ const Menu = () => {
           <div className='pt-1 text-xs text-gray-500 text-center'>{totalRatingsString}</div>
         </div>
       </div>
-      <div className=' text-gray-500 border-b-2 border-dashed border-gray-300 pb-1'> {message || ""}</div>
+      <div className=' text-gray-500 border-b-2 border-dashed border-gray-300 pb-3'> {message || ""}</div>
       <div className='font-[610] text-gray-700'><span className='text-xl'>&#128338;	</span> {deliveryTime} MINS  <span className=' ml-3 text-md border-2 rounded-full border-gray-700 px-1'>&#8377;</span> {costForTwoMessage}</div>
 
       {/* ------------------------------------------------------------------------------------------------Restaurant info ends here */}
 
-      
 
-{/* Menu Category and Category Items starts here  */}
+
+      {/* Menu Category and Category Items starts here  */}
 
       <div className='border-t-4'>
-      
+
         {categories.map((heading, idx) =>
-          <>
-            <div key={idx} className='pt-6 font-[625] text-xl'>{heading.card?.card?.title} ({heading.card?.card?.itemCards?.length})</div>
+          <div key={idx} className=''>
+            <div className='flex justify-between'>
+              <div className='pt-6 font-[625] text-xl'>{heading.card?.card?.title} ({heading.card?.card?.itemCards?.length})</div>
+              <div className='pt-6 font-[625] text-xl cursor-pointer'>🔼</div>
+            </div>
             {heading.card?.card?.itemCards?.map((item) => {
 
               return (
 
-                <div key={item.card?.info?.id} className='flex justify-between border-b-[1px] py-8 items-center border-gray-300'>
+                <div key={item.card?.info?.id} className='menu-items flex justify-between border-b-[1px] py-8 items-center border-gray-300'>
                   <div>
                     <div className={`text-xs font-semibold ${getVegNonVegColor(item.card?.info?.itemAttribute.vegClassifier)}`}>{item.card?.info?.itemAttribute.vegClassifier}</div>
                     <div className='text-lg font-semibold'>{item.card?.info?.name}</div>
@@ -85,15 +85,11 @@ const Menu = () => {
               )
             })}
             <div className='border-b-[12px] border-gray-300'></div>
-          </>
+          </div>
 
 
         )}
-{/* ---------------------------------------------------------------------------------------Menu Category and Category Items ends here  */}
-
-
-
-        
+        {/* ---------------------------------------------------------------------------------------Menu Category and Category Items ends here  */}
 
       </div>
     </div>
