@@ -1,8 +1,15 @@
+import { useState } from 'react';
 import useRestaurantMenu from '../utils/useRestaurantMenu';
 import ShimmerMenu from './ShimmerMenu';
 import { useParams } from 'react-router-dom';
 
 const Menu = () => {
+
+  const [showItems, setShowItems] = useState(false);
+
+  const showItemsList = () => {
+    setShowItems(!showItems);
+  }
 
   const { resId } = useParams();
 
@@ -62,13 +69,13 @@ const Menu = () => {
 
         {categories.map((heading, idx) =>
           <div key={idx} className=''>
-            <div className='flex justify-between'>
-              <div className='pt-6 font-[625] text-xl'>{heading.card?.card?.title} ({heading.card?.card?.itemCards?.length})</div>
-              <div className='pt-6 font-[625] text-xl cursor-pointer'>🔼</div>
+            <div className='flex justify-between pb-2' onClick={showItemsList}>
+              <div className='pt-6 font-[625] text-lg'>{heading.card?.card?.title} ({heading.card?.card?.itemCards?.length})</div>
+              <div className='pt-6 font-[625] text-lg cursor-pointer'>{showItems ? '🔼' : '🔽'}</div>
             </div>
             {heading.card?.card?.itemCards?.map((item) => {
 
-              return (
+              return showItems && (
 
                 <div key={item.card?.info?.id} className='menu-items flex justify-between border-b-[1px] py-8 items-center border-gray-300'>
                   <div>
