@@ -11,7 +11,7 @@ const Navbar = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className='px-[200px] py-2 text-xl flex justify-between items-center border-b-2'>
+    <div className='px-[200px] py-2 text-xl flex justify-between items-center border-b-2 shadow-xl'>
       <div className="flex items-center space-x-1 cursor-pointer">
         <Link to="/" className="flex items-center space-x-1">
           <img
