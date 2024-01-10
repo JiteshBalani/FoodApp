@@ -82,7 +82,7 @@ const Body = () => {
   }
 
   return allRestaurants.length === 0 ? <ShimmerHome /> : (
-    <div className="px-[10vw] py-[50px] space-y-5 space-x-1">
+    <div className="px-[10vw] py-[50px] space-y-5 space-x-1 mx-6">
 
       {/* Search Bar */}
       <div
@@ -129,7 +129,7 @@ const Body = () => {
         onClick={under300}
         label="&#128523; Upto ₹300 for Two" />
       <div
-        className=" flex flex-wrap gap-9"
+        className=" flex flex-wrap gap-8"
       >
         {filteredRestaurants.map((restaurant) => (
           <Link to={"/restaurants/" + restaurant?.info.id} key={restaurant.info.id}><RestaurantCard resData={restaurant} /></Link>

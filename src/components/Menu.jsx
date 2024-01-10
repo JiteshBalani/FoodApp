@@ -61,7 +61,7 @@ const Menu = () => {
 
       {/* Menu Category and Category Items starts here  */}
 
-      <div className='border-t-4'>
+      <div className='border-t-4 border-gray-500'>
 
         {categories.map((heading, idx) =>
 

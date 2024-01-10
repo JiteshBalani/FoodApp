@@ -81,7 +81,7 @@ const Offers = () => {
 
     return restaurants.length === 0 ? <ShimmerHome /> : (
         <div>
-            <div className="px-[200px] py-[50px] space-y-5 space-x-1">
+            <div className="px-[200px] py-[50px] space-y-5 space-x-1 mx-6">
                 <div><Link className="text-blue-500" to="/" >Home</Link>/Offers</div>
                 {/* Search Bar*/}
                 <div
@@ -129,7 +129,7 @@ const Offers = () => {
 
                 {/* RestaurantCard Display */}
                 <div
-                    className=" flex flex-wrap gap-9"
+                    className=" flex flex-wrap gap-8"
                 >
                     {filteredRestaurants.map((restaurant) => (
                         <Link to={"/restaurants/" + restaurant?.info.id} key={restaurant.info.id}><RestaurantCard resData={restaurant} offer={restaurant} /></Link>

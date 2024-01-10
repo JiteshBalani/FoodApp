@@ -16,7 +16,7 @@ const RestaurantCard = ({resData, offer = {}}) => {
     } = offer?.info || {};
     return (
         <div
-            className='flex flex-col items-center w-[260px] rounded-md space-y-1 cursor-pointer shadow-sm shadow-[#f0545438]'
+            className='flex flex-col items-center w-[320px] rounded-md space-y-1 cursor-pointer shadow-sm shadow-[#f0545438]'
         >
             <div className="relative ">
                 <div className="flex gap-1 absolute inset-x-0 bottom-0 text-white bg-black bg-opacity-15 pl-1 font-bold text-xl shadow-inner ">
@@ -24,7 +24,7 @@ const RestaurantCard = ({resData, offer = {}}) => {
                     <h1>{subHeader}</h1>
                 </div>
                 <img
-                    className='h-[200px] w-screen rounded-md bg-center bg-cover'
+                    className='h-[215px] w-screen rounded-md bg-center bg-cover'
                     alt='restaurant_image'
                     src={resBanner + cloudinaryImageId}
                 ></img>

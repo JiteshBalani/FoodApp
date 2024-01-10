@@ -4,10 +4,10 @@ const ShimmerHome = () => {
     const Card = () => {
         return (
             <div
-                className='flex flex-col items-center w-[260px] rounded-xl space-y-1 cursor-pointer bg-gray-200 h-[320px] shadow-md'
+                className='flex flex-col items-center w-[320px] rounded-xl space-y-1 cursor-pointer bg-gray-200 h-[320px] shadow-md'
             >
                 <div><div
-                    className='h-[200px] w-full border-3 rounded-md bg-center bg-cover animate-pulse bg-gray-300 text-gray-300'
+                    className='h-[215px] w-full border-3 rounded-md bg-center bg-cover animate-pulse bg-gray-300 text-gray-300'
                 >dghnfjhf hdghd dndfndfndfvbhdfbndfdfbh</div></div>
                 <div className='text-xl font-semibold text-center w-full truncate animate-pulse bg-gray-300 text-gray-300'>sdghdsfhfdhff</div>
                 <div className='flex text-lg font-semibold space-x-3 animate-pulse'>
@@ -22,11 +22,13 @@ const ShimmerHome = () => {
         )
     }
     return (
-        <div className="px-[200px] py-[50px] space-y-5 space-x-1">
+        <div className="px-[200px] py-[50px] space-y-5 space-x-1 mx-6">
             <div className="flex items-center space-x-3">
                 <input className="border-2 border-gray-200 rounded-md p-2 px-4 bg-gray-200"></input>
                 <button className="rounded-md border-2 border-gray-200 bg-gray-200 text-[#F05455] p-2 px-4 w-24 h-10 font-semibold"></button>
             </div>
+            <div className="font-bold text-2xl text-gray-200 bg-gray-200">Restaurants With Great Offers Near You</div>
+
             <div className="text-gray-200 space-x-1">
                 <Button label='All Restaurants'/>
                 <Button label='Top Rated Restaurants'/>
@@ -35,7 +37,7 @@ const ShimmerHome = () => {
                 <Button label='Upto 3300 for Two'/>
             </div>
             
-            <div className="flex flex-wrap gap-9 ">
+            <div className="flex flex-wrap gap-8">
                 <Card />
                 <Card />
                 <Card />
