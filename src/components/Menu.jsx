@@ -7,7 +7,7 @@ import MenuCategory from './MenuCategory';
 
 const Menu = () => {
 
-  // const [showItems, setShowItems] = useState(false);
+  const [showItems, setShowItems] = useState(0);
 
   // const showItemsList = () => {
   //   setShowItems(!showItems);
@@ -66,7 +66,10 @@ const Menu = () => {
         {categories.map((heading, idx) =>
 
           <div key={idx} >
-            <MenuCategory data={heading.card?.card} />
+            <MenuCategory data={heading.card?.card} 
+            showItems={showItems === idx ? true : false}
+            setShowItems={() => setShowItems(idx)}
+             />
             <div className='border-b-[12px] border-gray-200'></div>
           </div>
 

@@ -26,6 +26,7 @@ const RestaurantCard = ({resData, offer = {}}) => {
                 <img
                     className='h-[215px] w-screen rounded-md bg-center bg-cover'
                     alt='restaurant_image'
+                    style={{objectFit:'cover'}}
                     src={resBanner + cloudinaryImageId}
                 ></img>
             </div>

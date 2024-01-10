@@ -129,7 +129,7 @@ const Offers = () => {
 
                 {/* RestaurantCard Display */}
                 <div
-                    className=" flex flex-wrap gap-8"
+                    className=" flex flex-wrap gap-8 justify-between"
                 >
                     {filteredRestaurants.map((restaurant) => (
                         <Link to={"/restaurants/" + restaurant?.info.id} key={restaurant.info.id}><RestaurantCard resData={restaurant} offer={restaurant} /></Link>

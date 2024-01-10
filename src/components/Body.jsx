@@ -129,7 +129,7 @@ const Body = () => {
         onClick={under300}
         label="&#128523; Upto ₹300 for Two" />
       <div
-        className=" flex flex-wrap gap-8"
+        className=" flex flex-wrap gap-8 justify-between"
       >
         {filteredRestaurants.map((restaurant) => (
           <Link to={"/restaurants/" + restaurant?.info.id} key={restaurant.info.id}><RestaurantCard resData={restaurant} /></Link>
