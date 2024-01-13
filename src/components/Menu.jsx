@@ -38,24 +38,22 @@ const Menu = () => {
     );
 
   return (
-    <div className="px-[25vw] py-[50px] space-y-5 space-x-1 ">
+    <div className="px-[25vw] py-[50px] space-y-5 space-x-1">
 
       {/* Restaurant info starts here */}
-
-      <div className='flex items-center justify-between'>
-        <div>
-          <div className='text.xl font-semibold text-xl'>{name}</div>
-          <div className='font-thin text-gray-500'>{cuisines.join(", ")} </div>
-          <div className='font-thin text-gray-500 pr-10'>{labels[1]?.message}</div>
+        <div className='flex items-center justify-between '>
+          <div>
+            <div className='text.xl font-semibold text-xl'>{name}</div>
+            <div className='font-thin text-gray-500'>{cuisines.join(", ")} </div>
+            <div className='font-thin text-gray-500 pr-10'>{labels[1]?.message}</div>
+          </div>
+          <div className='border-2 p-2 rounded-lg'>
+            <div className='font-semibold text-green-700 border-b-2 text-center text-lg'><span className='text-2xl'>&#9734;</span> {avgRating}</div>
+            <div className='pt-1 text-xs text-gray-500 text-center'>{totalRatingsString}</div>
+          </div>
         </div>
-        <div className='border-2 p-2 rounded-lg'>
-          <div className='font-semibold text-green-700 border-b-2 text-center text-lg'><span className='text-2xl'>&#9734;</span> {avgRating}</div>
-          <div className='pt-1 text-xs text-gray-500 text-center'>{totalRatingsString}</div>
-        </div>
-      </div>
-      <div className=' text-gray-500 border-b-2 border-dashed border-gray-300 pb-3 flex items-center'><img className='w-6 mr-1 max-h-8' src={resBanner + icon}></img>  {message || ""}</div>
-      <div className='font-[610] text-gray-700'><span className='text-xl'>&#128338;	</span> {deliveryTime} MINS  <span className=' ml-3 text-md border-2 rounded-full border-gray-700 px-1'>&#8377;</span> {costForTwoMessage}</div>
-
+        <div className=' text-gray-500 border-b-2 border-dashed border-gray-300 pb-3 flex items-center'><img className='w-6 mr-1 max-h-8' src={resBanner + icon}></img>  {message || ""}</div>
+        <div className='font-[610] text-gray-700'><span className='text-xl'>&#128338;	</span> {deliveryTime} MINS  <span className=' ml-3 text-md border-2 rounded-full border-gray-700 px-1 mr-1'>&#8377;</span> {costForTwoMessage}</div>
       {/* ------------------------------------------------------------------------------------------------Restaurant info ends here */}
 
 
@@ -66,10 +64,10 @@ const Menu = () => {
         {categories.map((heading, idx) =>
 
           <div key={idx} >
-            <MenuCategory data={heading.card?.card} 
-            showItems={showItems === idx ? true : false}
-            setShowItems={() => setShowItems(idx)}
-             />
+            <MenuCategory data={heading.card?.card}
+              showItems={showItems === idx ? true : false}
+              setShowItems={() => setShowItems(idx)}
+            />
             <div className='border-b-[12px] border-gray-200'></div>
           </div>
 

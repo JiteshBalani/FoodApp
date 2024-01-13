@@ -11,7 +11,7 @@ const Navbar = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className='px-[200px] py-2 text-xl flex justify-between items-center border-b-2 shadow-xl'>
+    <div className='px-[200px] py-2 text-xl flex justify-between items-center border-b-2 shadow-xl bg-white'>
       <div className="flex items-center space-x-1 cursor-pointer">
         <Link to="/" className="flex items-center space-x-1">
           <img
@@ -23,24 +23,25 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex space-x-8 pr-5 text-[#F05455] font-semibold">
-      <div className="flex items-center space-x-1">
+      <div className="flex items-center space-x-1 font-thin text-sm">
           <div className="cursor-pointer underline-offset-4">{onlineStatus === true ? "🟢 Active" : "🔴 Offline"}</div>
         </div>
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-1 hover:ring-2 ring-[#F05455] px-1">
           <img
             alt="offer-icon"
             className="w-[20px] h-[20px]"
             src="https://cdn-icons-png.flaticon.com/512/3508/3508366.png"></img>
           <div className="cursor-pointer"><Link to="/">Home</Link></div>
         </div>
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-1 hover:ring-2 ring-[#F05455] px-1">
           <img
             alt="offer-icon"
             className="w-[20px] h-[20px]"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOq9jCIZLTV9PhvgX_Y-oj6MUjba9Vm37q2g&usqp=CAU"></img>
           <div className="cursor-pointer"><Link to="/offers">Offers</Link></div>
+          <div className="text-[10px] font-semibold mb-4 text-black">NEW</div>
         </div>
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-1 hover:ring-2 ring-[#F05455] px-1">
           <img
             alt="offer-icon"
             className="w-[20px] h-[20px]"

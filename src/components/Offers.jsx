@@ -122,14 +122,14 @@ const Offers = () => {
                     label="&#9889; Fastest Delivery" />
                 <Button
                     onClick={veg}
-                    label="&#9752; Pure Veg Restaurants" />
+                    label="🍀 Pure Veg Restaurants" />
                 <Button
                     onClick={under300}
                     label="&#128523; Upto ₹300 for Two" />
 
                 {/* RestaurantCard Display */}
                 <div
-                    className=" flex flex-wrap gap-8 justify-between"
+                    className=" flex flex-wrap gap-9"
                 >
                     {filteredRestaurants.map((restaurant) => (
                         <Link to={"/restaurants/" + restaurant?.info.id} key={restaurant.info.id}><RestaurantCard resData={restaurant} offer={restaurant} /></Link>
