@@ -1,13 +1,36 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useRestaurantMenu from '../utils/useRestaurantMenu';
 import ShimmerMenu from './ShimmerMenu';
 import { useParams } from 'react-router-dom';
 import { resBanner } from '../utils/common';
 import MenuCategory from './MenuCategory';
+import MenuHeader from './MenuHeader';
 
 const Menu = () => {
 
   const [showItems, setShowItems] = useState(0);
+  const [menuHeader, setMenuHeader] = useState(false);
+  
+  useEffect( () => {
+    const handleScroll = () => {
+      const scrollThreshold = 0;
+      const currentScrollY = window.scrollY;
+
+      if(currentScrollY > scrollThreshold) {
+        setMenuHeader(true);
+      } else {
+        setMenuHeader(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+  },[]);
+
 
   // const showItemsList = () => {
   //   setShowItems(!showItems);
@@ -38,7 +61,9 @@ const Menu = () => {
     );
 
   return (
+  <div>
     <div className="px-[25vw] py-[50px] space-y-5 space-x-1">
+      {menuHeader && <MenuHeader header={resInfo?.cards[0]?.card?.card?.info}/>}
 
       {/* Restaurant info starts here */}
         <div className='flex items-center justify-between '>
@@ -75,6 +100,7 @@ const Menu = () => {
         {/* ---------------------------------------------------------------------------------------Menu Category and Category Items ends here  */}
 
       </div>
+    </div>
     </div>
   )
 }

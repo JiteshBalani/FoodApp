@@ -26,14 +26,14 @@ const Navbar = () => {
       <div className="flex items-center space-x-1 font-thin text-sm">
           <div className="cursor-pointer underline-offset-4">{onlineStatus === true ? "🟢 Active" : "🔴 Offline"}</div>
         </div>
-        <div className="flex items-center space-x-1 hover:ring-2 ring-[#F05455] px-1">
+        <div className="flex items-center space-x-1 hover:text-black px-1">
           <img
             alt="offer-icon"
             className="w-[20px] h-[20px]"
             src="https://cdn-icons-png.flaticon.com/512/3508/3508366.png"></img>
           <div className="cursor-pointer"><Link to="/">Home</Link></div>
         </div>
-        <div className="flex items-center space-x-1 hover:ring-2 ring-[#F05455] px-1">
+        <div className="flex items-center space-x-1 hover:text-black px-1">
           <img
             alt="offer-icon"
             className="w-[20px] h-[20px]"
@@ -41,7 +41,7 @@ const Navbar = () => {
           <div className="cursor-pointer"><Link to="/offers">Offers</Link></div>
           <div className="text-[10px] font-semibold mb-4 text-black">NEW</div>
         </div>
-        <div className="flex items-center space-x-1 hover:ring-2 ring-[#F05455] px-1">
+        <div className="flex items-center space-x-1 hover:text-black px-1">
           <img
             alt="offer-icon"
             className="w-[20px] h-[20px]"
@@ -50,7 +50,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center space-x-1">
 
-          <div className="cursor-pointer rounded-md w-22 mx-2 px-2 py-1 border-[#F05455] text-center text-[#F05455] border-2"
+          <div className="cursor-pointer rounded-md w-22 mx-2 px-2 py-1 border-[#F05455] text-center text-[#F05455] border-2 hover:bg-red-200 hover:text-black"
             onClick={() => {
               log === 'Login' ? setLog('Logout') : setLog('Login')
             }}> {log} </div>
