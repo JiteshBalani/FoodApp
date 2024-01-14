@@ -7,7 +7,7 @@ const MenuItems = ({ items }) => {
   };
 
   const bestSeller = (item) => {
-    return item === true ? 'text-[#F05455] bg-orange-200 w-fit px-1 rounded-sm' : '';
+    return item === true ? 'text-yellow-500 w-fit px-1 rounded-sm' : '';
   }
 
   return (
@@ -17,7 +17,7 @@ const MenuItems = ({ items }) => {
           <div>
             <div className=' flex items-center space-x-1'>
               <div className={`text-xs font-semibold ${getVegNonVegColor(data.card?.info?.itemAttribute.vegClassifier)}`}>{data.card?.info?.itemAttribute.vegClassifier}</div>
-              <div className={`text-md animate-pulse font-semibold ${bestSeller(data.card?.info?.isBestseller)}`}>{data.card?.info?.isBestseller === true ? '⭐Bestseller' : ''}</div>
+              <div className={`text-sm animate-bounce font-semibold ${bestSeller(data.card?.info?.isBestseller)}`}>{data.card?.info?.isBestseller === true ? '⭐BESTSELLER' : ''}</div>
             </div>
             <div className='text-lg font-semibold'>{data.card?.info?.name}</div>
             <div className='text-sm'>&#8377; {data.card?.info?.defaultPrice / 100 || data.card?.info?.price / 100}</div>

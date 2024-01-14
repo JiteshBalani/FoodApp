@@ -20,11 +20,13 @@ const Navbar = () => {
             src={LogoNavbar}
             ></img>
           <div className="yummy-tummy-title text-3xl font-black pb-3">yummy-tummy</div>
+          <div className="cursor-pointer underline-offset-4 text-xs mb-14">{onlineStatus === true ? "🟢 Active" : "🔴 Offline"}</div>
+
         </Link>
       </div>
       <div className="flex space-x-8 pr-5 text-[#F05455] font-semibold">
-      <div className="flex items-center space-x-1 font-thin text-sm">
-          <div className="cursor-pointer underline-offset-4">{onlineStatus === true ? "🟢 Active" : "🔴 Offline"}</div>
+      <div className="flex items-center space-x-1 text-sm">
+          {/* <div className="cursor-pointer underline-offset-4">{onlineStatus === true ? "🟢 Active" : "🔴 Offline"}</div> */}
         </div>
         <div className="flex items-center space-x-1 hover:text-black px-1">
           <img
