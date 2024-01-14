@@ -1,4 +1,5 @@
 import { menuImage } from '../utils/common';
+import FOOD from './FOOD.png'
 
 const MenuItems = ({ items }) => {
 
@@ -25,7 +26,7 @@ const MenuItems = ({ items }) => {
           </div>
           <div className='flex flex-col items-center ml-2'>
 
-            {data.card?.info?.imageId === undefined ? "" :
+            {data.card?.info?.imageId === undefined ? <img className='min-w-[118px] min-h-[96px] max-w-[118px] max-h-[96px] rounded-md' src={FOOD}></img> :
               <img className='min-w-[118px] min-h-[96px] max-w-[118px] max-h-[96px] rounded-md' src={menuImage + data.card?.info?.imageId}></img>
             }
             <button className='w-[94px] h-[34px] mt-[-10px] hover:shadow-xl bg-white px-3 text-green-600 border-[1px] py-1 rounded-lg font-medium cursor-pointer'>ADD</button>
