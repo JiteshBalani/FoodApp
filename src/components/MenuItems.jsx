@@ -6,12 +6,19 @@ const MenuItems = ({ items }) => {
     return vegClassifier === 'VEG' ? ' rounded-sm border-2 border-green-600 text-green-600 w-fit px-1' : 'rounded-sm border-2 border-red-600 text-red-600 w-fit px-1';
   };
 
+  const bestSeller = (item) => {
+    return item === true ? 'text-[#F05455] bg-orange-200 w-fit px-1 rounded-sm' : '';
+  }
+
   return (
     <div>
       {items.map((data) => (
         <div key={data.card?.info?.id} className='menu-items flex justify-between border-b-[1px] py-8 items-center border-gray-300'>
           <div>
-            <div className={`text-xs font-semibold ${getVegNonVegColor(data.card?.info?.itemAttribute.vegClassifier)}`}>{data.card?.info?.itemAttribute.vegClassifier}</div>
+            <div className=' flex items-center space-x-1'>
+              <div className={`text-xs font-semibold ${getVegNonVegColor(data.card?.info?.itemAttribute.vegClassifier)}`}>{data.card?.info?.itemAttribute.vegClassifier}</div>
+              <div className={`text-md animate-pulse font-semibold ${bestSeller(data.card?.info?.isBestseller)}`}>{data.card?.info?.isBestseller === true ? '⭐Bestseller' : ''}</div>
+            </div>
             <div className='text-lg font-semibold'>{data.card?.info?.name}</div>
             <div className='text-sm'>&#8377; {data.card?.info?.defaultPrice / 100 || data.card?.info?.price / 100}</div>
             <div className='font-thin text-gray-500 pt-4 pr-10'>{data.card?.info?.description}</div>
