@@ -62,7 +62,7 @@ const Menu = () => {
 
   return (
   <div>
-    <div className="px-[25vw] py-[50px] space-y-5 space-x-1">
+    <div className="px-[25vw] py-[50px] space-y-5 space-x-1 ">
       {menuHeader && <MenuHeader header={resInfo?.cards[0]?.card?.card?.info}/>}
 
       {/* Restaurant info starts here */}

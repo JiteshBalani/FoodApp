@@ -10,9 +10,8 @@ const MenuHeader = ({header}) => {
 
 
     return (
-        <div className="py-0">
 
-            <div className="flex w-6/12 justify-between items-center ring-[#F05455] rounded-lg bg-gray-200 fixed p-4 py-2">
+            <div className="flex w-6/12 justify-between items-center border-b-2 border-gray-400 border-dashed rounded-lg bg-white fixed p-2 top-0">
                 <div>
                     <div className="font-semibold text-xl">{header?.name}</div>
                     <div className="text-gray-500">{header?.sla?.slaString}</div>
@@ -25,7 +24,6 @@ const MenuHeader = ({header}) => {
 
                 </div>
             </div>
-        </div>
     )
 }
 
