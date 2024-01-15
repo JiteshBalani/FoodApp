@@ -13,7 +13,7 @@ const MenuHeader = ({ header }) => {
     };
 
     const goBack = () => {
-        window.history.go(-1);
+        window.history.back();
     }
 
 
