@@ -13,7 +13,7 @@ const Menu = () => {
   
   useEffect( () => {
     const handleScroll = () => {
-      const scrollThreshold = 0;
+      const scrollThreshold = 150;
       const currentScrollY = window.scrollY;
 
       if(currentScrollY > scrollThreshold) {
