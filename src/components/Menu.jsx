@@ -72,9 +72,9 @@ const Menu = () => {
             <div className='font-thin text-gray-500'>{cuisines.join(", ")} </div>
             <div className='font-thin text-gray-500 pr-10'>{labels[1]?.message}</div>
           </div>
-          <div className='border-2 p-2 rounded-lg'>
-            <div className='font-semibold text-green-700 border-b-2 text-center text-lg'><span className='text-2xl'>&#9734;</span> {avgRating}</div>
-            <div className='pt-1 text-xs text-gray-500 text-center'>{totalRatingsString}</div>
+          <div className='border-2 p-2 rounded-lg w-2/12 max-w-fit'>
+            <div className='font-semibold text-green-700 border-b-[1px] text-center text-lg'><span className='text-xl'>&#9734;</span> {avgRating}</div>
+            <div className='py-1 text-xs text-gray-500 text-center font-semibold'>{totalRatingsString}</div>
           </div>
         </div>
         <div className=' text-gray-500 border-b-2 border-dashed border-gray-300 pb-3 flex items-center'><img className='w-6 mr-1 max-h-8' src={resBanner + icon}></img>  {message || "No info available ☹"}</div>
