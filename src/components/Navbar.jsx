@@ -3,13 +3,17 @@ import { Link } from "react-router-dom";
 import '../index.css'
 import LogoNavbar from './LogoNavbar.png'
 import useOnlineStatus from "../utils/useOnlineStatus";
- 
+import { useSelector } from "react-redux";
+
 
 const Navbar = () => {
 
   const [log, setLog] = useState("Login");
 
   const onlineStatus = useOnlineStatus();
+
+  //Subscribing to the store using a Selector
+  const cart = useSelector((store) => store.cart.items.length);
 
   return (
     <div className='px-[200px] py-2 text-xl flex justify-between items-center border-b-2 shadow-xl bg-white relative'>
@@ -19,14 +23,14 @@ const Navbar = () => {
             className="w-[70px] h-[70px] rounded-md"
             alt="yummy-tummy_logo"
             src={LogoNavbar}
-            ></img>
+          ></img>
           <div className="yummy-tummy-title text-3xl font-black pb-3">yummy-tummy</div>
-          <div className="cursor-pointer underline-offset-4 text-xs mb-14">{onlineStatus === true ? "🟢 Active" : "🔴 Offline"}</div>
+          <div className="cursor-pointer underline-offset-4 text-xs mb-14 border-[1px] px-1 border-[#F05455]">{onlineStatus === true ? "🟢 Active" : "🔴 Offline"}</div>
 
         </Link>
       </div>
       <div className="flex space-x-8 pr-5 text-[#F05455] font-semibold">
-      <div className="flex items-center space-x-1 text-sm">
+        <div className="flex items-center space-x-1 text-sm">
           {/* <div className="cursor-pointer underline-offset-4">{onlineStatus === true ? "🟢 Active" : "🔴 Offline"}</div> */}
         </div>
         <div className="flex items-center space-x-1 hover:text-black px-1">
@@ -58,11 +62,13 @@ const Navbar = () => {
               log === 'Login' ? setLog('Logout') : setLog('Login')
             }}> {log} </div>
         </div>
-        <div><img
-          className="w-[40px] h-[40px] cursor-pointer"
-          alt="cart_icon"
-          src="https://www.iconpacks.net/icons/2/free-shopping-cart-icon-2029-thumb.png"
-        ></img>
+        <div className="flex flex-col justify-center items-center">
+          { cart < 1 ? '' : <div className="bg-[#F05455] animate-bounce border-gray-500 border-[1px] font-semibold text-sm ml-3 mb-[-15px] p-1 px-2 w-fit text-white text-center rounded-full ">{cart}</div>}
+          <img
+            className="w-[40px] h-[40px] cursor-pointer"
+            alt="cart_icon"
+            src="https://www.iconpacks.net/icons/2/free-shopping-cart-icon-2029-thumb.png"
+          ></img>
         </div>
       </div>
     </div>

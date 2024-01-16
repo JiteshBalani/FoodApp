@@ -1,4 +1,4 @@
-import {lazy, Suspense} from 'react'
+import { lazy, Suspense } from 'react'
 import Navbar from './components/Navbar'
 import Body from './components/Body'
 import Footer from './components/Footer'
@@ -7,6 +7,8 @@ import Menu from './components/Menu'
 // import Help from './components/Help'
 import ErrorPage from './components/ErrorPage'
 import { createBrowserRouter, Outlet } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import store from './utils/store.js'
 
 const Help = lazy(() => import("./components/Help.jsx"));
 
@@ -15,9 +17,11 @@ const App = () => {
 
   return (
     <>
-    <Navbar/>
-    <Outlet/>
-    <Footer/>
+      <Provider store={store}>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </Provider>
     </>
   );
 };
@@ -25,15 +29,15 @@ const App = () => {
 export const appRouter = createBrowserRouter([
   {
     path: '/',
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: '/',
-        element: <Body/>
+        element: <Body />
       },
       {
         path: '/offers',
-        element: <Offers/>
+        element: <Offers />
       },
       {
         path: '/help',
@@ -45,12 +49,12 @@ export const appRouter = createBrowserRouter([
       },
       {
         path: '/restaurants/:resId',
-        element: <Menu/>
+        element: <Menu />
       }
     ],
-    errorElement: <ErrorPage/>
+    errorElement: <ErrorPage />
   },
-  
+
 ]);
 
 
