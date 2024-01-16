@@ -13,7 +13,7 @@ const Navbar = () => {
   const onlineStatus = useOnlineStatus();
 
   //Subscribing to the store using a Selector
-  const cart = useSelector((store) => store.cart.items.length);
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className='px-[200px] py-2 text-xl flex justify-between items-center border-b-2 shadow-xl bg-white relative'>
@@ -25,7 +25,7 @@ const Navbar = () => {
             src={LogoNavbar}
           ></img>
           <div className="yummy-tummy-title text-3xl font-black pb-3">yummy-tummy</div>
-          <div className="cursor-pointer underline-offset-4 text-xs mb-14 border-[1px] px-1 border-[#F05455]">{onlineStatus === true ? "🟢 Active" : "🔴 Offline"}</div>
+          <div className="cursor-pointer underline-offset-4 text-xs mb-14 border-[1px] rounded-md p-1 border-[#F05455]">{onlineStatus === true ? "🟢 Active" : "🔴 Offline"}</div>
 
         </Link>
       </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
             }}> {log} </div>
         </div>
         <div className="flex flex-col justify-center items-center">
-          { cart < 1 ? '' : <div className="bg-[#F05455] animate-bounce border-gray-500 border-[1px] font-semibold text-sm ml-3 mb-[-15px] p-1 px-2 w-fit text-white text-center rounded-full ">{cart}</div>}
+          { cartItems.length < 1 ? '' : <div className="bg-[#E74E3A] animate-bounce border-gray-500 border-[1px] font-semibold text-sm ml-3 mb-[-15px] p-1 px-2 w-fit text-white text-center rounded-full ">{cartItems.length}</div>}
           <img
             className="w-[40px] h-[40px] cursor-pointer"
             alt="cart_icon"
