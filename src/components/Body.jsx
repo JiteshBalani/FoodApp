@@ -18,7 +18,7 @@ const Body = () => {
 
   const fetchData = async () => {
 
-    const data = await fetch(HOME_PAGE_RES_DATA,{method: 'GET', dataType: 'jsonp'});
+    const data = await fetch(HOME_PAGE_RES_DATA);
     const json = await data.json();
 
     console.log(json);
