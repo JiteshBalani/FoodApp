@@ -63,7 +63,8 @@ const Navbar = () => {
             }}> {log} </div>
         </div>
         <div className="flex flex-col justify-center items-center">
-          { cartItems.length < 1 ? '' : <div className="bg-gray-200 animate-bounce border-gray-500 border-[1px] font-semibold text-sm ml-3 mb-[-15px] p-1 w-fit text-center rounded-3xl ">{cartItems.length}</div>}
+          {cartItems.length < 1 ? '' : 
+          <div className="bg-orange-200 animate-pulse border-blue-500 border-[1px] font-semibold text-sm ml-3 mb-[-15px] p-1 w-fit text-center rounded-full "> {cartItems.length} </div>}
           <img
             className="w-[40px] h-[40px] cursor-pointer"
             alt="cart_icon"
