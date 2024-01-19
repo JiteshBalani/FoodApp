@@ -9,6 +9,7 @@ import ErrorPage from './components/ErrorPage'
 import { createBrowserRouter, Outlet } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './utils/store.js'
+import Cart from './components/Cart.jsx'
 
 const Help = lazy(() => import("./components/Help.jsx"));
 
@@ -46,6 +47,10 @@ export const appRouter = createBrowserRouter([
             <Help />
           </Suspense>
         ),
+      },
+      {
+        path: '/cart',
+        element: <Cart/>,
       },
       {
         path: '/restaurants/:resId',

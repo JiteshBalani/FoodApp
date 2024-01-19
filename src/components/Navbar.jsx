@@ -4,7 +4,7 @@ import '../index.css'
 import LogoNavbar from './LogoNavbar.png'
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { useSelector } from "react-redux";
-
+import Cart from "./Cart";
 
 const Navbar = () => {
 
@@ -63,13 +63,15 @@ const Navbar = () => {
             }}> {log} </div>
         </div>
         <div className="flex flex-col justify-center items-center">
-          {cartItems.length < 1 ? '' : 
-          <div className="bg-orange-200 animate-pulse border-blue-500 border-[1px] font-semibold text-sm ml-3 mb-[-15px] p-1 w-fit text-center rounded-full "> {cartItems.length} </div>}
-          <img
+          {cartItems.length < 1 ? '' :
+            <div className="bg-orange-200 animate-pulse border-blue-500 border-[1px] font-semibold text-sm ml-3 mb-[-15px] p-1 w-fit text-center rounded-full "> {cartItems.length} </div>}
+          <Link to="/cart" ><img
+            onMouseEnter={Cart}
             className="w-[40px] h-[40px] cursor-pointer"
             alt="cart_icon"
             src="https://www.iconpacks.net/icons/2/free-shopping-cart-icon-2029-thumb.png"
           ></img>
+          </Link>
         </div>
       </div>
     </div>

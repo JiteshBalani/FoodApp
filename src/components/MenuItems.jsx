@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux';
+import { addItem } from '../utils/cartSlice';
 import { menuImage } from '../utils/common';
 import FOOD from './FOOD.png'
 
@@ -9,6 +11,13 @@ const MenuItems = ({ items }) => {
 
   const bestSeller = (item) => {
     return item === true ? 'text-yellow-500 w-fit px-1 rounded-sm' : '';
+  }
+
+  const dispatch = useDispatch();
+
+  const handleAddItem = (item) => {
+    //dispatch an action
+    dispatch(addItem(item));
   }
 
   return (
@@ -32,7 +41,9 @@ const MenuItems = ({ items }) => {
               style={{ objectFit: 'cover' }}
               ></img>
             }
-            <button className='w-[94px] h-[34px] mt-[-10px] hover:shadow-xl bg-white px-3 text-green-600 border-[1px] py-1 rounded-lg font-medium cursor-pointer'>ADD</button>
+            <button
+            onClick={() => handleAddItem(data)} 
+            className='w-[94px] h-[34px] mt-[-10px] hover:shadow-xl bg-white px-3 text-green-600 border-[1px] py-1 rounded-lg font-medium cursor-pointer'>ADD</button>
           </div>
         </div>
       ))}
