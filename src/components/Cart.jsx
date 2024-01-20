@@ -16,7 +16,7 @@ const Cart = () => {
   };
   return (
     <div
-      className="min-h-screen px-[600px] mt-0 py-[50px] flex flex-col space-y-2  "
+      className="min-h-screen px-[600px] mt-0 py-[50px] flex flex-col space-y-2 bg-gray-200 "
     >
       <div className="space-y-5 space-x-1">
         <div><Link className="text-2xl" to="/" >🔙Back to Home</Link></div>

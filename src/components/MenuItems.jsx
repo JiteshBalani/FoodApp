@@ -28,7 +28,7 @@ const MenuItems = ({ items }) => {
   };
 
   const itemsCount = (item) => {
-    return cartItems.filter((menuItem) => menuItem === item).length;  
+    return cartItems.filter((menuItem) => menuItem === item).length;
   };
 
   return (
@@ -52,7 +52,10 @@ const MenuItems = ({ items }) => {
                 style={{ objectFit: 'cover' }}
               ></img>
             }
-            {cartItems.includes(data) ? <AddedMenuItems handleAddItem={()=>handleAddItem(data)} handleRemoveItem={()=>handleRemoveItem(data)} itemsCount={itemsCount(data)} /> :
+            {cartItems.includes(data) ?
+              <AddedMenuItems handleAddItem={() => handleAddItem(data)}
+                handleRemoveItem={() => handleRemoveItem(data)}
+                itemsCount={itemsCount(data)} /> :
               <button
                 onClick={() => handleAddItem(data)}
                 className='w-[94px] h-[34px] mt-[-10px]  hover:shadow-xl bg-white px-3 text-green-600 border-[1px] py-1 rounded-lg font-medium cursor-pointer'>Add</button>
