@@ -65,7 +65,7 @@ const Navbar = () => {
         <div className="flex flex-col  cursor-pointer">
             <Link to="/cart" >
           {cartItems.length < 1 ? '' :
-              <div className="bg-orange-200 animate-pulse border-blue-500 border-[1px] font-semibold text-sm ml-[15px] mb-[-15px] px-1 p-[2px] w-fit text-center rounded-full "> {cartItems.length} </div>}
+              <div className="bg-orange-200 animate-pulse border-blue-500 border-[1px] font-semibold text-sm ml-[18px] mb-[-15px] px-1 p-[2px] w-fit text-center rounded-full "> {cartItems.length} </div>}
               <img
                 className="w-[45px] h-[40px] cursor-pointer"
                 alt="cart_icon"
