@@ -1,9 +1,12 @@
-import { useDispatch } from 'react-redux';
-import { addItem } from '../utils/cartSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { addItem, removeItem } from '../utils/cartSlice';
 import { menuImage } from '../utils/common';
 import FOOD from './FOOD.png'
+import AddedMenuItems from './AddedMenuItems';
 
 const MenuItems = ({ items }) => {
+
+  const cartItems = useSelector((store) => store.cart.items);
 
   const getVegNonVegColor = (vegClassifier) => {
     return vegClassifier === 'VEG' ? ' rounded-sm border-2 border-green-600 text-green-600 w-fit px-1' : 'rounded-sm border-2 border-red-600 text-red-600 w-fit px-1';
@@ -11,14 +14,22 @@ const MenuItems = ({ items }) => {
 
   const bestSeller = (item) => {
     return item === true ? 'text-yellow-500 w-fit px-1 rounded-sm' : '';
-  }
+  };
 
   const dispatch = useDispatch();
 
   const handleAddItem = (item) => {
     //dispatch an action
     dispatch(addItem(item));
-  }
+  };
+
+  const handleRemoveItem = (item) => {
+    dispatch(removeItem(item));
+  };
+
+  const itemsCount = (item) => {
+    return cartItems.filter((menuItem) => menuItem === item).length;  
+  };
 
   return (
     <div>
@@ -36,14 +47,19 @@ const MenuItems = ({ items }) => {
           <div className='flex flex-col items-center ml-2'>
 
             {data.card?.info?.imageId === undefined ? <img className='min-w-[118px] min-h-[96px] max-w-[118px] max-h-[96px] rounded-md' src={FOOD}></img> :
-              <img className='min-w-[118px] min-h-[96px] max-w-[118px] max-h-[96px] rounded-md' 
-              src={menuImage + data.card?.info?.imageId}
-              style={{ objectFit: 'cover' }}
+              <img className='min-w-[118px] min-h-[96px] max-w-[118px] max-h-[96px] rounded-md'
+                src={menuImage + data.card?.info?.imageId}
+                style={{ objectFit: 'cover' }}
               ></img>
             }
-            <button
-            onClick={() => handleAddItem(data)} 
-            className='w-[94px] h-[34px] mt-[-10px] hover:shadow-xl bg-white px-3 text-green-600 border-[1px] py-1 rounded-lg font-medium cursor-pointer'>ADD</button>
+            {cartItems.includes(data) ? <AddedMenuItems handleAddItem={()=>handleAddItem(data)} handleRemoveItem={()=>handleRemoveItem(data)} itemsCount={itemsCount(data)} /> :
+              <button
+                onClick={() => handleAddItem(data)}
+                className='w-[94px] h-[34px] mt-[-10px]  hover:shadow-xl bg-white px-3 text-green-600 border-[1px] py-1 rounded-lg font-medium cursor-pointer'>Add</button>
+
+            }
+
+
           </div>
         </div>
       ))}
