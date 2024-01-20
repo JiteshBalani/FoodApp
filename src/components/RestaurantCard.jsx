@@ -16,7 +16,7 @@ const RestaurantCard = ({resData, offer = {}}) => {
     } = offer?.info || {};
     return (
         <div
-            className='flex flex-col items-center w-[320px] rounded-md space-y-1 cursor-pointer shadow-sm shadow-[#f0545438]'
+            className='flex flex-col items-center w-[320px] rounded-md space-y-1 cursor-pointer shadow-sm shadow-[#f0545438] hover:bg-red-300'
         >
             <div className="relative ">
                 <div className="flex gap-1 absolute inset-x-0 bottom-0 text-white bg-black bg-opacity-15 pl-1 font-bold text-xl shadow-inner ">
@@ -36,7 +36,7 @@ const RestaurantCard = ({resData, offer = {}}) => {
                 <div>~{deliveryTime} mins</div>
             </div>
             <div className='text-md text-center font-thin truncate w-full'>{cuisines.join(", ")}</div>
-            <div className="text-md text-center text-[#F05455] font-semibold">{costForTwo.toUpperCase()}</div>
+            <div className="text-md text-center text-orange-600 font-semibold">{costForTwo.toUpperCase()}</div>
 
 
         </div>
