@@ -5,18 +5,21 @@ import { useParams } from 'react-router-dom';
 import { resBanner } from '../utils/common';
 import MenuCategory from './MenuCategory';
 import MenuHeader from './MenuHeader';
+import MenuCartBar from './MenuCartBar';
+import { useSelector } from 'react-redux';
+import MenuBrowser from './MenuBrowser';
 
 const Menu = () => {
 
   const [showItems, setShowItems] = useState(0);
   const [menuHeader, setMenuHeader] = useState(false);
-  
-  useEffect( () => {
+
+  useEffect(() => {
     const handleScroll = () => {
       const scrollThreshold = 150;
       const currentScrollY = window.scrollY;
 
-      if(currentScrollY > scrollThreshold) {
+      if (currentScrollY > scrollThreshold) {
         setMenuHeader(true);
       } else {
         setMenuHeader(false);
@@ -29,7 +32,9 @@ const Menu = () => {
       window.removeEventListener('scroll', handleScroll);
     };
 
-  },[]);
+  }, []);
+
+  const cartItems = useSelector((store) => store.cart.items);
 
 
   // const showItemsList = () => {
@@ -61,11 +66,11 @@ const Menu = () => {
     );
 
   return (
-  <div>
-    <div className="px-[25vw] py-[50px] space-y-5 space-x-1 ">
-      {menuHeader && <MenuHeader header={resInfo?.cards[0]?.card?.card?.info}/>}
+    <div>
+      <div className="px-[25vw] py-[50px] space-y-5 space-x-1 ">
+        {menuHeader && <MenuHeader header={resInfo?.cards[0]?.card?.card?.info} />}
 
-      {/* Restaurant info starts here */}
+        {/* Restaurant info starts here */}
         <div className='flex items-center justify-between '>
           <div>
             <div className='text.xl font-semibold text-xl'>{name}</div>
@@ -79,28 +84,46 @@ const Menu = () => {
         </div>
         <div className=' text-gray-500 border-b-2 border-dashed border-gray-300 pb-3 flex items-center'><img className='w-6 mr-1 max-h-8' src={resBanner + icon}></img>  {message || "No info available ☹"}</div>
         <div className='font-[610] text-gray-700'><span className='text-xl'>&#128338;	</span> {deliveryTime} MINS  <span className=' ml-3 text-md border-2 rounded-full border-gray-700 px-1 mr-1'>&#8377;</span> {costForTwoMessage}</div>
-      {/* ------------------------------------------------------------------------------------------------Restaurant info ends here */}
+        {/* ------------------------------------------------------------------------------------------------Restaurant info ends here */}
 
 
-      {/* Menu Category and Category Items starts here  */}
+        {/* Menu Category and Category Items starts here  */}
 
-      <div className='border-t-4 border-gray-500'>
+        <div className='border-t-4 border-gray-500'>
 
-        {categories.map((heading, idx) =>
+          {categories.map((heading, idx) =>
 
-          <div key={idx} >
-            <MenuCategory data={heading.card?.card}
-              showItems={showItems === idx ? true : false}
-              setShowItems={() => setShowItems(idx)}
-            />
-            <div className='border-b-[12px] border-gray-200'></div>
-          </div>
+            <div key={idx} >
+              <MenuCategory data={heading.card?.card}
+                showItems={showItems === idx ? true : false}
+                setShowItems={() => setShowItems(idx)}
+              />
+              <div className='border-b-[12px] border-gray-200'></div>
+            </div>
 
-        )}
-        {/* ---------------------------------------------------------------------------------------Menu Category and Category Items ends here  */}
+          )}
+          {/* ---------------------------------------------------------------------------------------Menu Category and Category Items ends here  */}
+
+        </div>
+
+        {cartItems.length > 0 ? <MenuCartBar /> : ""}
 
       </div>
-    </div>
+      <div className='mx-[44vw] py-1 px-4 bottom-20 hover:shadow-inner hover:shadow-gray-400 bg-[#0078D7] text-white font-semibold rounded-full w-fit flex justify-center items-center cursor-pointer z-50 fixed'
+        onClick= { () => 
+          {
+            categories.map((heading, idx) =>
+              <div key={idx} >
+                <MenuBrowser data={heading.card?.card}
+                />
+              </div>
+            )
+          }
+          }
+       >
+        <span className='text-2xl mr-1'>🍽</span>
+        <div className='text-md'>BROWSE MENU</div>
+      </div>
     </div>
   )
 }
