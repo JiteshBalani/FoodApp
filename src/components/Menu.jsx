@@ -65,6 +65,7 @@ const Menu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
+
   return (
     <div>
       <div className="px-[25vw] py-[50px] space-y-5 space-x-1 ">
@@ -109,21 +110,12 @@ const Menu = () => {
         {cartItems.length > 0 ? <MenuCartBar /> : ""}
 
       </div>
-      <div className='mx-[44vw] py-1 px-4 bottom-20 hover:shadow-inner hover:shadow-gray-400 bg-[#0078D7] text-white font-semibold rounded-full w-fit flex justify-center items-center cursor-pointer z-50 fixed'
-        onClick= { () => 
-          {
-            categories.map((heading, idx) =>
-              <div key={idx} >
-                <MenuBrowser data={heading.card?.card}
-                />
-              </div>
-            )
-          }
-          }
+      {/* <div 
+        className='mx-[44vw] py-1 px-4 bottom-20 hover:shadow-inner hover:shadow-gray-400 bg-[#0078D7] text-white rounded-full w-fit flex justify-center items-center cursor-pointer z-50 fixed'
        >
         <span className='text-2xl mr-1'>🍽</span>
         <div className='text-md'>BROWSE MENU</div>
-      </div>
+      </div> */}
     </div>
   )
 }
