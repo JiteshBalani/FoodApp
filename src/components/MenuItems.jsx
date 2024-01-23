@@ -30,7 +30,7 @@ const MenuItems = ({ items }) => {
   const itemsCount = (item) => {
     return cartItems.filter((menuItem) => menuItem === item).length;
   };
-
+  
   return (
     <div>
       {items.map((data) => (
@@ -52,6 +52,8 @@ const MenuItems = ({ items }) => {
                 style={{ objectFit: 'cover' }}
               ></img>
             }
+
+            {/* "ADD" button and " | - 2 + | " button logic */}
             {cartItems.includes(data) ?
               <AddedMenuItems handleAddItem={() => handleAddItem(data)}
                 handleRemoveItem={() => handleRemoveItem(data)}
@@ -61,7 +63,7 @@ const MenuItems = ({ items }) => {
                 className='w-[94px] h-[34px] mt-[-10px]  hover:shadow-xl bg-white px-3 text-green-600 border-[1px] py-1 rounded-lg font-medium cursor-pointer'>Add</button>
 
             }
-
+            {/* -------------------------------- "ADD" button and " | - 2 + | " button logic */}
 
           </div>
         </div>
