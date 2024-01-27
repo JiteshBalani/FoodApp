@@ -30,10 +30,13 @@ const Cart = () => {
       >Clear Cart</button> : ''}
 
       {cartItems?.length === 0 ? (
-        <h1 className="text-center bg-[#f26a6a4a] text-[#F05455] text-2xl p-5 rounded-md">
+        <div className="flex flex-col justify-center items-center space-y-10 pt-4">
+        <img src="https://pennpowergroup.com/images/EmptyCart.png" alt="empty-cart_icon"></img>
+        <h1 className="text-center bg-[#E9BAC2] text-[#B60F20] font-semibold text-2xl p-5 rounded-md">
           Cart is empty! Explore the top restaurants with
           <Link className="font-semibold text-black cursor-pointer underline-offset-2 underline mx-2" to="/offers">discounts</Link>
-          on your favorite food and beverages.</h1>) :
+          on your favorite food and beverages.</h1>
+          </div>) :
         <MenuItems items={cartItems} />
 
       }
