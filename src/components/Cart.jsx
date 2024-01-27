@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const Cart = () => {
 
   const cartItems = useSelector((store) => store.cart.items);
+  const totalAmount = useSelector((store) => store.cart.totalAmount);
 
   console.log(cartItems);
 
@@ -41,7 +42,7 @@ const Cart = () => {
       {cartItems.length === 0 ? "" : 
       <div className="flex justify-between bg-[#F05455] rounded-md p-2 font-semibold fixed w-[651px] bottom-12">
         <div>Total Cart Value: </div>
-        <div>&#8377; </div>
+        <div>&#8377; {totalAmount} </div>
       </div>}
     </div>
   )
