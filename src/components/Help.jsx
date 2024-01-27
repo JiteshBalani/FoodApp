@@ -21,8 +21,8 @@ const Help = () => {
                 <div className="text-lg space-y-2">
                     <div><Link className="text-blue-500" to="/">Home</Link>/Help</div>
                         <h1 className="text-3xl font-bold rounded-lg text-center text-[#F05455] px-2">Help Center</h1>
-                    <div className=" bg-[#f26a6a4a] rounded-lg  text-[#F05455]">
-                        <p className="text-left text-xl py-[10px] px-2">Welcome to our Help Center! We're here to assist you in making your food delivery experience smooth and enjoyable. If you have any questions or concerns, you'll likely find the answers here. If not, feel free to reach out to our support team for personalized assistance.</p>
+                    <div>
+                        <p className="text-center font-bold text-xl py-[10px] px-2">Welcome to our Help Center! We're here to assist you in making your food delivery experience smooth and enjoyable. If you have any questions or concerns, you'll likely find the answers here. If not, feel free to reach out to our support team for personalized assistance.</p>
                     </div>
                     <div className="px-[100px] pt-[50px] space-y-10">
                         <section className="space-y-6">
