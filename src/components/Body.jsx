@@ -82,7 +82,7 @@ const Body = () => {
   }
 
   return allRestaurants.length === 0 ? <ShimmerHome /> : (
-    <div className="px-[10vw] py-[50px] space-y-5 space-x-1 mx-6">
+    <div className="px-[12vw] py-[50px] space-y-5 space-x-1">
 
       {/* Search Bar */}
       <div
