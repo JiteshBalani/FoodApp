@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { MENU_API } from './common';
 
 const useRestaurantMenu = (resId) => {
 
@@ -10,7 +9,7 @@ const useRestaurantMenu = (resId) => {
     },[]);
 
     const fetchMenuData = async () => {
-        const data = await fetch(MENU_API+ resId+"&catalog_qa=undefined&submitAction=ENTER")
+        const data = await fetch(`https://yummytummy-f8eh.onrender.com/api/menu?restaurantId=${resId}`)
         const json = await data.json();
 
         setResInfo(json.data);
