@@ -24,8 +24,8 @@ const Body = () => {
     console.log(json);
 
     //Optional Chaining: something?.something1?.product?.info?.name
-    setAllRestaurants(json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || json?.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
-    setFilteredRestaurants(json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || json?.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
+    setAllRestaurants(json?.data.cards[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants || json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || json?.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || json?.data.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
+    setFilteredRestaurants(json?.data.cards[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants || json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || json?.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || json?.data.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
 
   }
 
