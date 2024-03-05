@@ -5,6 +5,7 @@ import Button from "./Button";
 import ShimmerHome from "./ShimmerHome";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import Spinner from "./Spinner"
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -81,7 +82,7 @@ const Body = () => {
     )
   }
 
-  return allRestaurants.length === 0 ? <ShimmerHome /> : (
+  return allRestaurants.length === 0 ? <Spinner /> : (
     <div className="px-[12vw] py-[50px] space-y-5 space-x-1">
 
       {/* Search Bar */}
