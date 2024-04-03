@@ -28,8 +28,8 @@ function CircularProgressWithLabel(props) {
                     </Typography>
                 </Box>
             </Box>
-            <Typography variant="h4" component="div" sx={{ color: "#F05455", marginTop:10, fontStyle:'italic', fontFamily:'Dancing Script', }} >
-            😡Hunger's worst enemy : Our delivery service😋.
+            <Typography variant="h4" component="div" sx={{ color: "#F05455", marginTop:10 }} >
+            Hunger's worst enemy : Our delivery service.
             </Typography>
         </Box>
     );

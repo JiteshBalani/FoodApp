@@ -1,10 +1,12 @@
-import { useRouteError } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import '../index.css'
 
 const ErrorPage = () => {
 
-  const err = useRouteError();
-  console.log(err);
+  const location = useLocation();
+  const { state } = location;
+  const err = state ? state.error : { status: 404, statusText: 'Not Found' };
+
   const handleRefresh = () => {
     window.location.reload(true);
   };
@@ -18,7 +20,7 @@ const ErrorPage = () => {
       ></img>
       <h1 className="font-black text-3xl">OOPS!</h1>
       <h1 className="font-bold text-2xl">Something went wrong. Please <a href="#" onClick={handleRefresh} className="text-blue-600 underline underline-offset-8">refresh the page</a> or check your internet connection.</h1>
-      <h1 className="font-bold text-2xl">{err.status} : {err.statusText}</h1>
+      <h1 className="font-bold text-2xl">Error {err.status} : {err.statusText}</h1>
     </div>
   )
 }
