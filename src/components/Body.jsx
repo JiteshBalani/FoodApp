@@ -74,7 +74,7 @@ const Body = () => {
   if (onlineStatus === false) {
     return (
       <div
-        className="h-screen px-[200px] py-[50px] flex flex-col justify-center items-center space-y-12  "
+        className="h-screen px-[200px] py-[50px] flex flex-col justify-center items-center space-y-12"
       >
         <div className="text-[#F05455] font-black italic text-3xl">Hi there!</div>
         <p className="text-xl">Looks like you're offline. Please check your connection</p>
@@ -130,7 +130,7 @@ const Body = () => {
         onClick={under300}
         label="&#128523; Upto ₹300 for Two" />
       <div
-        className=" flex flex-wrap gap-8 justify-between items-center"
+        className=" flex flex-wrap gap-8 justify-around items-center"
       >
         {filteredRestaurants.map((restaurant) => (
           <Link to={"/restaurants/" + restaurant?.info.id} key={restaurant.info.id}><RestaurantCard resData={restaurant} /></Link>

@@ -16,7 +16,7 @@ const RestaurantCard = ({resData, offer = {}}) => {
     } = offer?.info || {};
     return (
         <div
-            className='flex flex-col items-center w-[300px] rounded-md space-y-1 cursor-pointer hover:text-[#F05455] '
+            className='flex flex-col items-center w-[320px] rounded-md space-y-1 cursor-pointer hover:text-[#F05455] '
         >
             <div className="relative">
                 <div className="flex gap-1 absolute inset-x-0 bottom-0 text-white bg-black bg-opacity-15 pl-1 font-bold text-xl shadow-inner ">
