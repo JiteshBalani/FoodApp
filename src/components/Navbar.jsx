@@ -16,7 +16,7 @@ const Navbar = () => {
   const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className='px-[50px] py-2 text-xl flex justify-between items-center border-b-2 shadow-xl bg-white relative'>
+    <div className='px-[50px] py-2 text-xl flex justify-between items-center border-b-2 shadow-xl bg-white relative overflow-hidden'>
       <div className="flex items-center space-x-1 cursor-pointer">
         <Link to="/" className="flex items-center space-x-1">
           <img
