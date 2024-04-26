@@ -56,20 +56,21 @@ const Menu = () => {
     feeDetails: { icon, message },
     sla: { deliveryTime },
     costForTwoMessage,
-  } = resInfo?.cards[0]?.card?.card?.info || resInfo?.cards[1]?.card?.card?.info || resInfo?.cards[2]?.card?.card?.info || resInfo?.cards[3]?.card?.card?.info || {};
+  } = resInfo?.cards[2]?.card?.card?.info || resInfo?.cards[3]?.card?.card?.info || {};
 
   const categories =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c.card?.["card"]?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
+    console.log(categories);
 
 
   return (
     <div>
       <div className="px-[25vw] py-[50px] space-y-5 space-x-1 ">
-        {menuHeader && <MenuHeader header={resInfo?.cards[0]?.card?.card?.info} />}
+        {menuHeader && <MenuHeader header={resInfo?.cards[2]?.card?.card?.info} />}
 
         {/* Restaurant info starts here */}
         <div className='flex items-center justify-between '>
