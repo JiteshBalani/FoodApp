@@ -23,13 +23,7 @@ const Footer = () => {
                 <div className='text-gray-400'>&copy; {currentYear} Yummy Tummy Technologies Pvt. Ltd.</div>
             </div>
 
-            <div className='contact-us text-gray-400 space-y-[6px]'>
-                <div className='text-[#F05455] text-xl font-semibold'>Contact Us</div>
-                <div className='cursor-pointer'>Help & Support</div>
-                <div className='cursor-pointer'>Partner with us</div>
-                <div className='cursor-pointer'>Ride with us</div>
-                <div className='cursor-pointer'>Careers</div>
-            </div>
+        
 
         </div>
     )
