@@ -84,7 +84,7 @@ const Menu = () => {
             <div className='py-1 text-xs text-gray-500 text-center font-semibold'>{totalRatingsString}</div>
           </div>
         </div>
-        <div className=' text-gray-500 border-b-2 border-dashed border-gray-300 pb-3 flex items-center'><img className='w-6 mr-1 max-h-8' src={resBanner + icon}></img>  {message || "No info available ☹"}</div>
+        <div className=' text-gray-500 border-b-2 border-dashed border-gray-300 pb-3 flex items-center'><img className='w-6 mr-1 max-h-8' src={resBanner + icon}></img>  {message.replace(/<\/?b>/g, "") || "No info available ☹"}</div>
         <div className='font-[610] text-gray-700'><span className='text-xl'>&#128338;	</span> {deliveryTime} MINS  <span className=' ml-3 text-md border-2 rounded-full border-gray-700 px-1 mr-1'>&#8377;</span> {costForTwoMessage}</div>
         {/* ------------------------------------------------------------------------------------------------Restaurant info ends here */}
 
