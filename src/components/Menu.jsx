@@ -84,10 +84,7 @@ const Menu = () => {
             <div className='py-1 text-xs text-gray-500 text-center font-semibold'>{totalRatingsString}</div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-        <div className=' text-gray-500 border-b-2 border-dashed border-gray-300 pb-3 flex items-center'><img className='w-6 mr-1 max-h-8' src={resBanner + icon}></img>  {message.replace(/<\/?b>/g, "") || "No info available ☹"}</div>
->>>>>>> eea1ccbd683e77f8c56afd44e7a4e33479ddfab0
+        {/* <div className=' text-gray-500 border-b-2 border-dashed border-gray-300 pb-3 flex items-center'><img className='w-6 mr-1 max-h-8' src={resBanner + icon}></img>  {message.replace(/<\/?b>/g, "") || "No info available ☹"}</div> */}
         <div className='font-[610] text-gray-700'><span className='text-xl'>&#128338;	</span> {deliveryTime} MINS  <span className=' ml-3 text-md border-2 rounded-full border-gray-700 px-1 mr-1'>&#8377;</span> {costForTwoMessage}</div>
         {/* ------------------------------------------------------------------------------------------------Restaurant info ends here */}
 
@@ -115,8 +112,7 @@ const Menu = () => {
 
       </div>
       {/* <div 
-        className='mx-[44vw] py-1 px-4 bottom-20 hover:shadow-inner hover:shadow-gray-400 bg-[#0078D7] text-white rounded-full w-fit flex justify-center items-center cursor-pointer z-50 fixed'
-       >
+        className='mx-[44vw] py-1 px-4 bottom-20 hover:shadow-inner hover:shadow-gray-400 bg-[#0078D7] text-white rounded-full w-fit flex justify-center items-center cursor-pointer z-50 fixed'>
         <span className='text-2xl mr-1'>🍽</span>
         <div className='text-md'>BROWSE MENU</div>
       </div> */}
